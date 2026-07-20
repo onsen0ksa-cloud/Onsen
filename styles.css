@@ -1,11 +1,11 @@
 :root{
-  /* Palette chosen to complement a sakura-bamboo logo (assumption: deep indigo primary + soft sakura accent) */
-  --primary:#0b2545; /* deep indigo */
-  --accent:#ffb7c5;  /* sakura pink */
-  --gold:#f0c040;    /* warm subtle accent */
-  --bg:#f7f6f8;      /* light cream background */
-  --text:#10213a;    /* dark navy text */
-  --muted:#5b6b83;   /* muted slate */
+  /* Palette: brown/beige main, blue accent inspired by logo water, warm tones */
+  --primary:#8B6F47; /* warm brown */
+  --accent:#0099CC;  /* bright blue (water from logo) */
+  --gold:#D4A574;    /* light tan/beige accent */
+  --bg:#F5F1ED;      /* light cream/beige background */
+  --text:#2E2E2E;    /* dark brown text */
+  --muted:#8A8A8A;   /* muted gray-brown */
 }
 
 /* Full-bleed image helper */
