@@ -13,42 +13,45 @@
       <img src="logo.png" alt="Onsen logo" class="logo" />
       <h1>Onsen</h1>
       <p class="tag">Authentic Japanese relaxation — curated for Saudi professionals</p>
-      <p class="story">Experience bamboo gardens, sakura accents and traditional hot spring rituals adapted for a modern, luxurious retreat.</p>
+      <div class="hero-texts">
+        <div class="story">Experience bamboo gardens, sakura accents and traditional hot spring rituals adapted for a modern, luxurious retreat.</div>
+        <div class="lead">A serene destination for rest, ritual and renewal.</div>
+      </div>
       <div class="cta-row">
-        <a class="btn primary" id="book-whatsapp">Book via WhatsApp</a>
-        <a class="btn" id="book-email">Book via Email</a>
+        <a class="btn primary" href="booking.html">Book</a>
+        <a class="btn" href="services.html">Our Services</a>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section id="services">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <article class="service">
-          <h3>Private Onsen Ritual</h3>
-          <p class="price">SAR 650</p>
-          <p>Private hot spring session with guided rituals and tea service (90 min).</p>
-        </article>
-        <article class="service">
-          <h3>Sakura Body Massage</h3>
-          <p class="price">SAR 390</p>
-          <p>Signature Japanese massage using sakura-infused oils (60 min).</p>
-        </article>
-        <article class="service">
-          <h3>Zen Facial</h3>
-          <p class="price">SAR 280</p>
-          <p>Calming facial treatment with botanical extracts (50 min).</p>
-        </article>
+    <section class="full-bleed">
+      <div class="text-block container">
+        <h2>Welcome</h2>
+        <p>Discover ritual, comfort, and the slow rhythms of an authentic onsen experience adapted for modern luxury.</p>
+      </div>
+      <div class="full-bleed-image">
+        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=3840&q=80" alt="Onsen 4k" />
+      </div>
+      <div class="text-block container">
+        <h3>Design & Ambience</h3>
+        <p>Carefully curated interiors, bamboo gardens, and sakura accents create a calm, restorative setting.</p>
+      </div>
+      <div class="full-bleed-image">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=3840&q=80" alt="Torii Gate 4k" />
+      </div>
+      <div class="container cta-teaser">
+        <p>Explore our full services on the services page.</p>
+        <a class="btn" href="services.html">View Services</a>
       </div>
     </section>
 
     <section id="gallery">
       <h2>Gallery</h2>
       <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1200&q=60" alt="Hot spring"/>
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=60" alt="Sakura"/>
-        <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=60" alt="Bamboo"/>
+        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=3840&q=80" alt="Hot spring"/>
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=3840&q=80" alt="Sakura"/>
+        <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=3840&q=80" alt="Bamboo"/>
       </div>
     </section>
 
@@ -56,7 +59,7 @@
       <h2>Ambient Music</h2>
       <p>Upload your ambient track to assets/ambient.mp3 or replace the &lt;source&gt; below with a hosted URL.</p>
       <div class="music-player">
-        <audio id="ambient-audio" controls>
+        <audio id="ambient-audio" controls autoplay loop playsinline>
           <source src="assets/ambient.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
@@ -65,9 +68,11 @@
     </section>
 
     <section id="contact">
-      <h2>Contact & Booking</h2>
-      <p>WhatsApp: <a href="https://wa.me/996543688231" id="wa-link">+996543688231</a></p>
-      <p>Email: <a href="mailto:Onsen0.ksa@gmail.com">Onsen0.ksa@gmail.com</a></p>
+      <h2>Contact</h2>
+      <div class="container">
+        <p>For bookings, visit the <a href="booking.html">Booking page</a>.</p>
+        <p>Email: <a href="mailto:Onsen0.ksa@gmail.com">Onsen0.ksa@gmail.com</a></p>
+      </div>
     </section>
   </main>
 
