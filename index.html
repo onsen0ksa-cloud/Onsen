@@ -4,81 +4,162 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Onsen — Luxury Japanese Spa</title>
+  <meta name="description" content="Onsen offers a luxury Japanese-inspired spa experience with wellness rituals, curated treatments, and calming ambience in Saudi Arabia.">
   <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Onsen — Japanese-inspired luxury spa in Saudi Arabia. Book via WhatsApp or email.">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-inner">
-      <img src="logo.png" alt="Onsen logo" class="logo" />
-      <h1>Onsen</h1>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a href="index.html" class="brand" aria-label="Onsen home">
+        <img src="logo.png" alt="Onsen logo">
+        <span>Onsen</span>
+      </a>
+
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="services.html">Services</a>
         <a href="index.html#gallery">Gallery</a>
         <a href="booking.html">Booking</a>
         <a href="index.html#contact">Contact</a>
       </nav>
-      <p class="tag">Authentic Japanese relaxation — curated for Saudi professionals</p>
-      <div class="hero-texts">
-        <div class="story">Experience bamboo gardens, sakura accents and traditional hot spring rituals adapted for a modern, luxurious retreat.</div>
-        <div class="lead">A serene destination for rest, ritual and renewal.</div>
-      </div>
-      <div class="cta-row">
-        <a class="btn primary" href="booking.html">Book</a>
-        <a class="btn" href="services.html">Our Services</a>
+    </div>
+  </header>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Japanese calm, modern luxury</span>
+          <h1>Restore your rhythm.</h1>
+          <p class="tagline">Experience bamboo serenity, restorative hot springs, and professionally guided rituals designed for true rest in the heart of Saudi Arabia.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="booking.html">Book your visit</a>
+            <a class="btn" href="services.html">Explore services</a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <img class="hero-photo" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80" alt="Luxury spa relaxation room">
+          <div class="minor-card">
+            <span>Signature ritual</span>
+            <strong>90 min</strong>
+            <span>Private onsen journey</span>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="full-bleed">
-      <div class="text-block container">
-        <h2>Welcome</h2>
-        <p>Discover ritual, comfort, and the slow rhythms of an authentic onsen experience adapted for modern luxury.</p>
+  <main>
+    <section class="section container reveal">
+      <div class="section-header">
+        <h2>Wellness, designed to slow you down</h2>
+        <p>Every detail at Onsen is shaped to feel calm, elevated, and restorative — from the warm mineral baths to the soft, ambient atmosphere.</p>
       </div>
-      <div class="full-bleed-image">
-        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=3840&q=80" alt="Onsen 4k" />
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="icon-badge">♨</div>
+          <h3>Mineral rituals</h3>
+          <p>Traditional hot spring experiences with a refined, modern wellness perspective.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon-badge">🌿</div>
+          <h3>Botanical calm</h3>
+          <p>Natural aromatics, grounded body therapies, and carefully chosen restorative ingredients.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon-badge">✨</div>
+          <h3>Luxury ambience</h3>
+          <p>Soft lighting, cedar tones, and immersive design to support deep relaxation and renewal.</p>
+        </article>
       </div>
-      <div class="text-block container">
-        <h3>Design & Ambience</h3>
-        <p>Carefully curated interiors, bamboo gardens, and sakura accents create a calm, restorative setting.</p>
-      </div>
-      <div class="full-bleed-image">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=3840&q=80" alt="Torii Gate 4k" />
-      </div>
-      <div class="container cta-teaser">
-        <p>Explore our full services on the services page.</p>
-        <a class="btn" href="services.html">View Services</a>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>4.9/5</strong>
+          <span class="muted">Guest rating</span>
+        </div>
+        <div class="stat">
+          <strong>8+</strong>
+          <span class="muted">Signature rituals</span>
+        </div>
+        <div class="stat">
+          <strong>90 min</strong>
+          <span class="muted">Average session</span>
+        </div>
+        <div class="stat">
+          <strong>7 days</strong>
+          <span class="muted">Open weekly</span>
+        </div>
       </div>
     </section>
 
-    <section id="gallery">
-      <h2>Gallery</h2>
+    <section class="section full-bleed container reveal">
+      <div class="full-bleed-grid">
+        <div class="full-bleed-image">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80" alt="Japanese landscape and hot spring ambience">
+        </div>
+        <div class="callout">
+          <h3>Created for deep rest.</h3>
+          <p class="muted">Our spa is placed around the idea of intentional pause: fewer distractions, more balance, and a stronger sense of wellbeing for busy professionals and wellness seekers alike.</p>
+          <a class="btn primary" href="services.html" style="margin-top:1.25rem; width: fit-content;">View treatments</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section container reveal">
+      <div class="section-header">
+        <h2>Moments of stillness</h2>
+        <p>Explore the atmosphere, textures, and rituals that define the Onsen experience.</p>
+      </div>
+
       <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=3840&q=80" alt="Hot spring"/>
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=3840&q=80" alt="Sakura"/>
-        <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=3840&q=80" alt="Bamboo"/>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=900&q=80" alt="Onsen hot spring pool"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Sakura inspired spa design"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=900&q=80" alt="Bamboo and wellness setting"></div>
       </div>
     </section>
 
-    <section id="music">
-      <h2>Ambient Music</h2>
-      <p>Upload your ambient track to assets/ambient.mp3 or replace the &lt;source&gt; below with a hosted URL.</p>
-      <div class="music-player">
+    <section id="music" class="section container reveal">
+      <div class="section-header">
+        <h2>Ambient soundscape</h2>
+        <p>Settle into the space with warm, calming sound and a gentle atmosphere that supports effortless relaxation.</p>
+      </div>
+
+      <div class="music-box">
         <audio id="ambient-audio" controls autoplay loop playsinline>
           <source src="assets/ambient.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
-        <button id="toggle-music" class="btn">Play / Pause</button>
+        <div class="music-actions">
+          <button id="toggle-music" class="btn primary" type="button">Play / Pause</button>
+          <p class="muted">Tip: upload your own ambient track to <strong>assets/ambient.mp3</strong> to personalize the experience.</p>
+        </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="container">
-        <p>For bookings, visit the <a href="booking.html">Booking page</a>.</p>
-        <p>Email: <a href="mailto:Onsen0.ksa@gmail.com">Onsen0.ksa@gmail.com</a></p>
+    <section id="contact" class="section container reveal">
+      <div class="section-header">
+        <h2>Plan your visit</h2>
+        <p>Reserve a retreat, ask about private experiences, or enquire about group sessions.</p>
+      </div>
+
+      <div class="contact-grid">
+        <article class="info-card">
+          <h3>Booking</h3>
+          <p>Begin your visit with concierge-led booking support and tailored recommendations.</p>
+          <a class="btn primary" href="booking.html" style="margin-top:1rem;">Book now</a>
+        </article>
+        <article class="info-card">
+          <h3>Email</h3>
+          <p><a href="mailto:Onsen0.ksa@gmail.com">Onsen0.ksa@gmail.com</a></p>
+          <p>We reply within 24 hours.</p>
+        </article>
+        <article class="info-card">
+          <h3>Location</h3>
+          <p>Luxury wellness retreat in Saudi Arabia, welcoming individuals and small groups.</p>
+        </article>
       </div>
     </section>
   </main>
@@ -91,7 +172,7 @@
       <a href="booking.html">Booking</a>
       <a href="index.html#contact">Contact</a>
     </nav>
-    <p>&copy; Onsen • All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Onsen • All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
