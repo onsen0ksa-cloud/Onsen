@@ -110,14 +110,16 @@ button, input, textarea { font: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
+  color: var(--primary-deep);
+  font-family: "Noto Naskh Arabic", "Segoe UI", sans-serif;
+  font-size: 1.15rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
 
 .brand img {
-  width: 92px;
-  height: 92px;
+  width: 108px;
+  height: 108px;
   padding: 0.2rem;
   border: 2px solid rgba(93, 130, 149, 0.62);
   border-radius: 24px;
@@ -126,6 +128,11 @@ button, input, textarea { font: inherit; }
   background: rgba(234, 220, 207, 0.78);
   filter: sepia(0.12) saturate(0.92);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brand span {
+  color: var(--primary-deep);
+  text-shadow: 0 3px 12px rgba(59, 11, 22, 0.12);
 }
 
 .brand:hover img {
@@ -287,7 +294,7 @@ button, input, textarea { font: inherit; }
 .hero-photo {
   width: 100%;
   height: 100%;
-  min-height: 420px;
+  min-height: 460px;
   object-fit: cover;
   border-radius: 24px;
 }
@@ -654,7 +661,7 @@ ul.check-list li + li { margin-top: 0.4rem; }
 }
 
 @media (max-width: 560px) {
-  .brand img { width: 78px; height: 78px; }
+  .brand img { width: 84px; height: 84px; }
   .hero-inner { padding-top: 3rem; }
   .cta-row { flex-direction: column; align-items: stretch; }
   .btn { width: 100%; }
