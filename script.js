@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     home: {
       '.eyebrow': ['Japanese calm, modern luxury', 'هدوء ياباني وفخامة عصرية'],
-      'h1': ['Restore your rhythm.', 'استعد إيقاعك.'],
+      'h1': ['You deserve to be treated with luxury.', 'أنت تستحق أن تُعامل برفاهية.'],
       '.tagline': ['Experience bamboo serenity, restorative hot springs, and professionally guided rituals designed for true rest in the heart of Saudi Arabia.', 'استمتع بسكينة البامبو والينابيع الدافئة وطقوس العافية المصممة للراحة الحقيقية في قلب المملكة العربية السعودية.'],
       '.section-header h2': [['Wellness, designed to slow you down', 'عافية مصممة لتمنحك وقتاً للهدوء']],
       '.section-header p': [['Every detail at Onsen is shaped to feel calm, elevated, and restorative — from the warm mineral baths to the soft, ambient atmosphere.', 'كل تفصيل في أونسن صُمم ليمنحك الهدوء والرقي والاسترخاء، من الحمامات المعدنية الدافئة إلى الأجواء الناعمة.']],
@@ -47,8 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
       '.callout p': [['Our spa is placed around the idea of intentional pause: fewer distractions, more balance, and a stronger sense of wellbeing for busy professionals and wellness seekers alike.', 'صُمم منتجعنا حول فكرة التوقف الواعي: مشتتات أقل وتوازن أكبر وإحساس أعمق بالعافية.']],
       '#gallery .section-header h2': [['Moments of stillness', 'لحظات من السكينة']],
       '#gallery .section-header p': [['Explore the atmosphere, textures, and rituals that define the Onsen experience.', 'اكتشف الأجواء والتفاصيل والطقوس التي تميز تجربة أونسن.']],
-      '#music .section-header h2': [['Ambient soundscape', 'موسيقى المطر الهادئة']],
-      '#music .section-header p': [['Settle into the space with warm, calming sound and a gentle atmosphere that supports effortless relaxation.', 'استرخِ مع أصوات المطر الهادئة وأجواء لطيفة تساعدك على الراحة دون عناء.']],
       '#contact .section-header h2': [['Plan your visit', 'خطط لزيارتك']],
       '#contact .section-header p': [['Reserve a retreat, ask about private experiences, or enquire about group sessions.', 'احجز تجربتك أو اسأل عن الجلسات الخاصة أو المواعيد الجماعية.']],
     },
@@ -90,8 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-language]').forEach((button) => {
       button.classList.toggle('active', button.dataset.language === language);
     });
-    const toggleButton = document.getElementById('toggle-music');
-    if (toggleButton && audio) toggleButton.textContent = audio.paused ? (language === 'ar' ? 'تشغيل' : 'Play') : (language === 'ar' ? 'إيقاف' : 'Pause');
   };
 
   document.querySelectorAll('[data-language]').forEach((button) => {
@@ -102,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const audio = document.getElementById('ambient-audio');
-  const toggle = document.getElementById('toggle-music');
 
   if (audio) {
     try {
@@ -132,30 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', onFirstGesture, { once: true });
     document.addEventListener('keydown', onFirstGesture, { once: true });
-  }
-
-  if (toggle && audio) {
-    const updateLabel = () => {
-      const arabic = document.documentElement.lang === 'ar';
-      toggle.textContent = audio.paused ? (arabic ? 'تشغيل' : 'Play') : (arabic ? 'إيقاف' : (audio.muted ? 'Unmute' : 'Pause'));
-    };
-
-    updateLabel();
-
-    toggle.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play().catch(() => {});
-      } else {
-        audio.pause();
-      }
-
-      if (audio.muted) {
-        audio.muted = false;
-        audio.volume = 0.6;
-      }
-
-      updateLabel();
-    });
   }
 
   const revealItems = document.querySelectorAll('.reveal');

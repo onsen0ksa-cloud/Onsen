@@ -11,7 +11,7 @@
   <header class="site-header">
     <div class="container nav-row">
       <a href="index.html" class="brand" aria-label="Onsen home">
-        <img src="logo.png" alt="Onsen logo">
+        <img src="logo-transparent.png" alt="Onsen logo">
         <span>Onsen</span>
       </a>
 
@@ -125,23 +125,9 @@
       </div>
     </section>
 
-    <section id="music" class="section container reveal">
-      <div class="section-header">
-        <h2>Ambient soundscape</h2>
-        <p>Settle into the space with warm, calming sound and a gentle atmosphere that supports effortless relaxation.</p>
-      </div>
-
-      <div class="music-box">
-        <audio id="ambient-audio" autoplay loop playsinline>
-          <source src="assets/rainy-japanese-ambient.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-        <div class="music-actions">
-          <button id="toggle-music" class="btn primary" type="button">Play / Pause</button>
-          <p class="muted">A gentle Japanese-inspired soundscape for your visit.</p>
-        </div>
-      </div>
-    </section>
+    <audio id="ambient-audio" autoplay loop muted playsinline aria-hidden="true">
+      <source src="assets/rainy-japanese-ambient.wav" type="audio/wav">
+    </audio>
 
     <section id="contact" class="section container reveal">
       <div class="section-header">
