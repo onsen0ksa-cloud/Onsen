@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const waBtn = document.getElementById('book-whatsapp');
   const emailBtn = document.getElementById('book-email');
   const waLink = document.getElementById('wa-link');
-  const phone = '996543688231';
+  const phone = '966543688231';
   const prefill = encodeURIComponent("السلام عليكم، أرغب في حجز جلسة في أونسن. فضلاً شاركوني المواعيد المتاحة.");
 
   if (waBtn) {
