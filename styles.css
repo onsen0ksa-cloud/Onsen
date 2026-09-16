@@ -4,8 +4,8 @@
   --accent: #2fa7c7;
   --accent-soft: #dff8ff;
   --gold: #e3c39e;
-  --sand: #f2eee8;
-  --paper: #faf8f4;
+  --sand: #ded2c3;
+  --paper: #eee5da;
   --ink: #2c241f;
   --muted: #695d56;
   --line: rgba(46, 33, 27, 0.12);
@@ -15,11 +15,27 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
+  position: relative;
+  isolation: isolate;
   margin: 0;
   font-family: "Segoe UI", Inter, Arial, sans-serif;
   line-height: 1.6;
   color: var(--ink);
-  background: linear-gradient(180deg, #f2eee8 0%, #faf8f4 100%);
+  background: linear-gradient(180deg, #ded2c3 0%, #eee5da 100%);
+}
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background: url("logo-transparent.png") center / min(760px, 72vw) auto no-repeat;
+  filter: sepia(0.35) saturate(0.65);
+  opacity: 0.07;
+  pointer-events: none;
+}
+body > * {
+  position: relative;
+  z-index: 1;
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -35,7 +51,7 @@ button, input, textarea { font: inherit; }
   top: 0;
   z-index: 20;
   backdrop-filter: blur(16px);
-  background: rgba(242, 238, 232, 0.88);
+  background: rgba(222, 210, 195, 0.9);
   border-bottom: 1px solid var(--line);
 }
 
@@ -53,7 +69,7 @@ button, input, textarea { font: inherit; }
   padding: 0.2rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 250, 245, 0.8);
+  background: rgba(238, 229, 218, 0.88);
 }
 
 .language-switcher button {

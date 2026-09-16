@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailBtn = document.getElementById('book-email');
   const waLink = document.getElementById('wa-link');
   const phone = '996543688231';
-  const prefill = encodeURIComponent("Hello, I'd like to book a session at Onsen. Please share availability.");
+  const prefill = encodeURIComponent("السلام عليكم، أرغب في حجز جلسة في أونسن. فضلاً شاركوني المواعيد المتاحة.");
 
   if (waBtn) {
     waBtn.href = `https://wa.me/${phone}?text=${prefill}`;
@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (waLink) {
     waLink.href = `https://wa.me/${phone}`;
+    waLink.textContent = '@onsen0.ksa';
   }
 
   const navLinks = document.querySelectorAll('.site-nav a');
