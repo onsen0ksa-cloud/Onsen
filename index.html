@@ -185,19 +185,34 @@
         <p>اكتشف الأجواء والتفاصيل والطقوس التي تميز تجربة أونسن.</p>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-01.jpeg" alt="مدخل أونسن مزين بالبامبو والفوانيس الحمراء"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-02.jpeg" alt="جلسة استرخاء يابانية داخل أونسن"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-03.jpeg" alt="تفاصيل ديكور أونسن الياباني"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-04.jpeg" alt="منطقة استقبال هادئة في أونسن"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-05.jpeg" alt="أجواء سبا دافئة بإضاءة هادئة"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-06.jpeg" alt="تفاصيل طبيعية من تجربة أونسن"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-07.jpeg" alt="زاوية هادئة للاسترخاء في أونسن"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-08.jpeg" alt="تصميم ياباني معاصر داخل أونسن"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-09.jpeg" alt="تفاصيل البامبو والسجاد في أونسن"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-10.jpeg" alt="أجواء دافئة وهادئة للضيافة"></div>
+      <h3 class="gallery-subtitle">منتجات وطقوس العناية</h3>
+      <div class="gallery-grid gallery-products">
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-01.jpeg" alt="منتجات العناية الفاخرة في أونسن"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-02.jpeg" alt="زيوت ولوشنات جلسات أونسن"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-04.jpeg" alt="تفاصيل منتجات الاسترخاء والعناية"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-05.jpeg" alt="منتجات طقوس المساج في أونسن"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-09.jpeg" alt="مستلزمات الحمام الياباني في أونسن"></div>
+      </div>
+
+      <h3 class="gallery-subtitle">المكان والأجواء</h3>
+      <div class="gallery-grid gallery-venue">
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-03.jpeg" alt="ديكور أونسن الياباني الهادئ"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-06.jpeg" alt="زاوية طبيعية هادئة داخل أونسن"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-07.jpeg" alt="تصميم داخلي مريح في أونسن"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-08.jpeg" alt="أجواء سبا يابانية عصرية"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-10.jpeg" alt="إضاءة دافئة في مكان أونسن"></div>
       </div>
     </section>
+
+    <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="عرض صور أونسن" hidden>
+      <button class="lightbox-close" type="button" aria-label="إغلاق">×</button>
+      <button class="lightbox-control lightbox-prev" type="button" aria-label="الصورة السابقة">‹</button>
+      <figure>
+        <img class="lightbox-image" alt="">
+        <figcaption class="lightbox-caption"></figcaption>
+      </figure>
+      <button class="lightbox-control lightbox-next" type="button" aria-label="الصورة التالية">›</button>
+    </div>
 
     <audio id="ambient-audio" autoplay loop muted playsinline preload="auto" aria-hidden="true">
       <source src="assets/rainy-japanese-ambient.wav" type="audio/wav">
