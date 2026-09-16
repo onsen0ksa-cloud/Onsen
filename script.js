@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       audio.muted = true;
       audio.loop = true;
+      audio.preload = 'auto';
       audio.setAttribute('playsinline', '');
       audio.play().catch(() => {});
     } catch (error) {
@@ -113,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const unmute = () => {
       try {
         audio.muted = false;
-        audio.volume = 0.6;
+        audio.volume = 0.72;
         audio.play().catch(() => {});
       } catch (error) {
         // No-op.
