@@ -46,6 +46,20 @@ button, input, textarea { font: inherit; }
   margin: 0 auto;
 }
 
+.breadcrumbs {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a,
+.text-link {
+  color: var(--primary-deep);
+  font-weight: 700;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -435,6 +449,57 @@ button, input, textarea { font: inherit; }
   padding: 1.5rem;
 }
 
+.seo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.seo-grid .info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.case-study {
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(125, 87, 58, 0.1), rgba(227, 195, 158, 0.22));
+}
+
+.case-study h3 {
+  margin: 0.6rem 0;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.case-study p {
+  max-width: 720px;
+  color: var(--muted);
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.faq-list details {
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.faq-list p {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+}
+
 ul.check-list {
   margin: 0.8rem 0 0;
   padding-left: 1.2rem;
@@ -523,6 +588,7 @@ ul.check-list li + li { margin-top: 0.4rem; }
 
   .site-nav { justify-content: flex-start; }
   .gallery-grid { grid-template-columns: 1fr; }
+  .seo-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
