@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,7 +7,7 @@
   <meta name="description" content="Onsen offers a luxury Japanese-inspired spa experience with wellness rituals, curated treatments, and calming ambience in Saudi Arabia.">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="home">
   <header class="site-header">
     <div class="container nav-row">
       <a href="index.html" class="brand" aria-label="Onsen home">
@@ -22,6 +22,10 @@
         <a href="booking.html">Booking</a>
         <a href="index.html#contact">Contact</a>
       </nav>
+      <div class="language-switcher" aria-label="اختيار اللغة">
+        <button type="button" data-language="ar" class="active">العربية</button>
+        <button type="button" data-language="en">English</button>
+      </div>
     </div>
   </header>
 
@@ -39,7 +43,7 @@
         </div>
 
         <div class="hero-card reveal">
-          <img class="hero-photo" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80" alt="Luxury spa relaxation room">
+          <img class="hero-photo" src="https://images.unsplash.com/photo-1540555700478-4be289f3d7b4?auto=format&fit=crop&w=1200&q=85" alt="حمام أونسن ياباني هادئ">
           <div class="minor-card">
             <span>Signature ritual</span>
             <strong>90 min</strong>
@@ -98,7 +102,7 @@
     <section class="section full-bleed container reveal">
       <div class="full-bleed-grid">
         <div class="full-bleed-image">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80" alt="Japanese landscape and hot spring ambience">
+          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1600&q=85" alt="بوابة يابانية هادئة بين الأشجار">
         </div>
         <div class="callout">
           <h3>Created for deep rest.</h3>
@@ -115,9 +119,9 @@
       </div>
 
       <div class="gallery-grid">
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=900&q=80" alt="Onsen hot spring pool"></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Sakura inspired spa design"></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=900&q=80" alt="Bamboo and wellness setting"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85" alt="بوابة يابانية وسط الطبيعة"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?auto=format&fit=crop&w=900&q=85" alt="ينابيع ساخنة في اليابان"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=900&q=85" alt="أزهار الساكورا والسكينة"></div>
       </div>
     </section>
 
@@ -129,7 +133,7 @@
 
       <div class="music-box">
         <audio id="ambient-audio" autoplay loop playsinline>
-          <source src="assets/japanese-ambient.wav" type="audio/wav">
+          <source src="assets/rainy-japanese-ambient.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
         <div class="music-actions">
