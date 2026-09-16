@@ -4,47 +4,98 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Onsen — Services</title>
+  <meta name="description" content="Explore Onsen spa services, wellness rituals, and premium massage experiences designed for full-body restoration.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-inner">
-      <a href="index.html"><img src="logo.png" alt="Onsen logo" class="logo" /></a>
-      <h1>Our Services</h1>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a href="index.html" class="brand" aria-label="Onsen home">
+        <img src="logo.png" alt="Onsen logo">
+        <span>Onsen</span>
+      </a>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
+        <a href="services.html" class="active">Services</a>
         <a href="index.html#gallery">Gallery</a>
         <a href="booking.html">Booking</a>
         <a href="index.html#contact">Contact</a>
       </nav>
-      <p class="tag">Curated rituals and treatments</p>
     </div>
   </header>
 
-  <main class="container">
-    <section id="services-list">
-      <div class="services-grid">
-        <article class="service">
+  <main class="container page-intro">
+    <section class="section reveal">
+      <div class="section-header">
+        <h2>Signature wellness experiences</h2>
+        <p>Each ritual is created to nurture the body, calm the mind, and restore your sense of ease.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
           <h3>Private Onsen Ritual</h3>
           <p class="price">SAR 650</p>
-          <p>Private hot spring session with guided rituals and tea service (90 min).</p>
+          <p>Private hot spring session with thermal bathing, tea service, and guided breathing rituals for a deeply restorative 90-minute escape.</p>
         </article>
-        <article class="service">
+
+        <article class="service-card">
           <h3>Sakura Body Massage</h3>
           <p class="price">SAR 390</p>
-          <p>Signature Japanese massage using sakura-infused oils (60 min).</p>
+          <p>Signature Japanese massage using sakura-infused oils to release tension, restore circulation, and bring warmth to the skin.</p>
         </article>
-        <article class="service">
+
+        <article class="service-card">
           <h3>Zen Facial</h3>
           <p class="price">SAR 280</p>
-          <p>Calming facial treatment with botanical extracts (50 min).</p>
+          <p>Calming facial treatment with botanical extracts and gentle exfoliation designed to revive the complexion and soothe the senses.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Detox Bamboo Wrap</h3>
+          <p class="price">SAR 420</p>
+          <p>Thermal wrap treatment with bamboo-infused oils and a body polish for a full-body refresh and grounding ritual.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Evening Wind-Down</h3>
+          <p class="price">SAR 520</p>
+          <p>A slower, night-time restorative experience combining steam, massage, and quiet aromatherapy for deep release.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Couples Escape</h3>
+          <p class="price">SAR 980</p>
+          <p>Shared wellness ritual with twin treatment spaces, tea ceremony, and a calming bath experience for two.</p>
         </article>
       </div>
     </section>
 
-    <section class="container">
-      <p>To book any service, please visit the <a href="booking.html">Booking page</a>.</p>
+    <section class="section reveal">
+      <div class="section-header">
+        <h2>What is included</h2>
+      </div>
+      <div class="service-grid">
+        <div class="info-card">
+          <h3>Arrival experience</h3>
+          <p>Tea service, wellness consultation, and an intentional reset before your treatment begins.</p>
+        </div>
+        <div class="info-card">
+          <h3>Personalized guidance</h3>
+          <p>Our team recommends rituals tailored to your needs, pace, and preferred level of relaxation.</p>
+        </div>
+        <div class="info-card">
+          <h3>Post-session calm</h3>
+          <p>Enjoy a quiet recovery period with hydration, rest, and lingering warmth after your ritual.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="callout">
+        <h3>Ready to reserve your ritual?</h3>
+        <p class="muted">We’d love to help you choose the right treatment for your schedule and wellness goals.</p>
+        <a class="btn primary" href="booking.html" style="margin-top:1rem; width: fit-content;">Book a session</a>
+      </div>
     </section>
   </main>
 
@@ -56,7 +107,9 @@
       <a href="booking.html">Booking</a>
       <a href="index.html#contact">Contact</a>
     </nav>
-    <p>&copy; Onsen • All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Onsen • All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
