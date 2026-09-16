@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const translations = {
     common: {
-      nav: [['Home', 'الرئيسية'], ['Services', 'الخدمات'], ['Gallery', 'المعرض'], ['Booking', 'الحجز'], ['Contact', 'تواصل معنا']],
+      nav: [['Home', 'الرئيسية'], ['Menu', 'القائمة'], ['Services', 'الخدمات'], ['Gallery', 'المعرض'], ['Booking', 'الحجز'], ['Contact', 'تواصل معنا']],
       brand: ['Onsen', 'أونسن'],
     },
     home: {
