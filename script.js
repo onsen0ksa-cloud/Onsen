@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     img.addEventListener('click', () => {
       window.open(img.src, '_blank');
     });
-
-    setTranslated(localStorage.getItem('onsen-language') || 'ar');
   });
+
+  setTranslated(localStorage.getItem('onsen-language') || 'ar');
 });
