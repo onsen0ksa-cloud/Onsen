@@ -4,8 +4,8 @@
   --accent: #2fa7c7;
   --accent-soft: #dff8ff;
   --gold: #e3c39e;
-  --sand: #f7f0ea;
-  --paper: #fffaf5;
+  --sand: #ded2c3;
+  --paper: #eee5da;
   --ink: #2c241f;
   --muted: #695d56;
   --line: rgba(46, 33, 27, 0.12);
@@ -15,11 +15,27 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
+  position: relative;
+  isolation: isolate;
   margin: 0;
   font-family: "Segoe UI", Inter, Arial, sans-serif;
   line-height: 1.6;
   color: var(--ink);
-  background: linear-gradient(180deg, #f6f0eb 0%, #fbf8f6 100%);
+  background: linear-gradient(180deg, #ded2c3 0%, #eee5da 100%);
+}
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background: url("logo-transparent.png") center / min(760px, 72vw) auto no-repeat;
+  filter: sepia(0.35) saturate(0.65);
+  opacity: 0.07;
+  pointer-events: none;
+}
+body > * {
+  position: relative;
+  z-index: 1;
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -35,7 +51,7 @@ button, input, textarea { font: inherit; }
   top: 0;
   z-index: 20;
   backdrop-filter: blur(16px);
-  background: rgba(247, 240, 234, 0.85);
+  background: rgba(222, 210, 195, 0.9);
   border-bottom: 1px solid var(--line);
 }
 
@@ -45,6 +61,30 @@ button, input, textarea { font: inherit; }
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 0;
+}
+
+.language-switcher {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(238, 229, 218, 0.88);
+}
+
+.language-switcher button {
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.78rem;
+}
+
+.language-switcher button.active {
+  background: var(--primary);
+  color: #fff;
 }
 
 .brand {
@@ -57,11 +97,12 @@ button, input, textarea { font: inherit; }
 }
 
 .brand img {
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  object-fit: cover;
+  width: 74px;
+  height: 74px;
+  border-radius: 20px;
+  object-fit: contain;
   box-shadow: var(--shadow);
+  background: transparent;
 }
 
 .site-nav {
@@ -371,8 +412,11 @@ button, input, textarea { font: inherit; }
 }
 
 .music-box audio {
-  width: 100%;
-  max-width: 100%;
+  display: none;
+}
+
+#ambient-audio {
+  display: none;
 }
 
 .music-actions {
