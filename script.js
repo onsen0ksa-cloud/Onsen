@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (!location.hash) window.scrollTo(0, 0);
   const yearNode = document.getElementById('year');
   if (yearNode) yearNode.textContent = new Date().getFullYear();
 
@@ -39,15 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
     home: {
       '.eyebrow': ['Japanese calm, modern luxury', 'هدوء ياباني وفخامة عصرية'],
       'h1': ['You deserve to be treated with luxury.', 'أنت تستحق أن تُعامل برفاهية.'],
-      '.tagline': ['Experience bamboo serenity, restorative hot springs, and professionally guided rituals designed for true rest in the heart of Saudi Arabia.', 'استمتع بسكينة البامبو والينابيع الدافئة وطقوس العافية المصممة للراحة الحقيقية في قلب المملكة العربية السعودية.'],
-      '.section-header h2': [['Wellness, designed to slow you down', 'عافية مصممة لتمنحك وقتاً للهدوء']],
+      '.tagline': ['Experience bamboo serenity, restorative hot springs, and professionally guided rituals designed for true rest in Riyadh.', 'استمتع بسكينة البامبو والينابيع الدافئة وطقوس العافية المصممة للراحة الحقيقية في الرياض.'],
+      'main > section.section:nth-of-type(1) .section-header h2': [['A quiet space to restore your balance', 'مساحة هادئة لاستعادة توازنك']],
       '.section-header p': [['Every detail at Onsen is shaped to feel calm, elevated, and restorative — from the warm mineral baths to the soft, ambient atmosphere.', 'كل تفصيل في أونسن صُمم ليمنحك الهدوء والرقي والاسترخاء، من الحمامات المعدنية الدافئة إلى الأجواء الناعمة.']],
       '.feature-card h3': [['Mineral rituals', 'طقوس المعادن'], ['Botanical calm', 'سكينة الطبيعة'], ['Luxury ambience', 'أجواء فاخرة']],
       '.feature-card p': [['Traditional hot spring experiences with a refined, modern wellness perspective.', 'تجارب ينابيع ساخنة تقليدية برؤية عصرية راقية.'], ['Natural aromatics, grounded body therapies, and carefully chosen restorative ingredients.', 'روائح طبيعية وعلاجات جسدية ومكونات مختارة بعناية.'], ['Soft lighting, cedar tones, and immersive design to support deep relaxation and renewal.', 'إضاءة ناعمة ونغمات خشبية وتصميم يساعد على الاسترخاء والتجدد.']],
       '.callout h3': [['Created for deep rest.', 'صُمم للراحة العميقة.']],
       '.callout p': [['Our spa is placed around the idea of intentional pause: fewer distractions, more balance, and a stronger sense of wellbeing for busy professionals and wellness seekers alike.', 'صُمم منتجعنا حول فكرة التوقف الواعي: مشتتات أقل وتوازن أكبر وإحساس أعمق بالعافية.']],
-      '#gallery .section-header h2': [['Moments of stillness', 'لحظات من السكينة']],
+      '#gallery .section-header h2': [['Details that keep calm close', 'تفاصيل تُبقي الهدوء قريباً']],
       '#gallery .section-header p': [['Explore the atmosphere, textures, and rituals that define the Onsen experience.', 'اكتشف الأجواء والتفاصيل والطقوس التي تميز تجربة أونسن.']],
+      '#reviews .section-header h2': [['Words from our guests', 'كلمات تضيء تجربة ضيوفنا']],
+      '#reviews .section-header p': [['Selected reflections on calm, privacy, and thoughtful care.', 'انطباعات مختارة عن الهدوء والخصوصية والعناية المتقنة.']],
       '#contact .section-header h2': [['Plan your visit', 'خطط لزيارتك']],
       '#contact .section-header p': [['Reserve a retreat, ask about private experiences, or enquire about group sessions.', 'احجز تجربتك أو اسأل عن الجلسات الخاصة أو المواعيد الجماعية.']],
     },
@@ -99,36 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const audio = document.getElementById('ambient-audio');
-
   if (audio) {
-    try {
-      audio.muted = true;
-      audio.loop = true;
-      audio.preload = 'auto';
-      audio.setAttribute('playsinline', '');
+    audio.muted = true;
+    audio.loop = true;
+    audio.preload = 'auto';
+    audio.setAttribute('playsinline', '');
+    audio.load();
+    const startAmbient = () => {
       audio.play().catch(() => {});
-    } catch (error) {
-      // No-op if browser blocks autoplay.
-    }
-
-    const unmute = () => {
-      try {
-        audio.muted = false;
-        audio.volume = 0.72;
-        audio.play().catch(() => {});
-      } catch (error) {
-        // No-op.
-      }
     };
-
-    const onFirstGesture = () => {
-      unmute();
-      document.removeEventListener('click', onFirstGesture);
-      document.removeEventListener('keydown', onFirstGesture);
-    };
-
-    document.addEventListener('click', onFirstGesture, { once: true });
-    document.addEventListener('keydown', onFirstGesture, { once: true });
+    if (audio.readyState >= 2) startAmbient();
+    else audio.addEventListener('canplaythrough', startAmbient, { once: true });
   }
 
   const revealItems = document.querySelectorAll('.reveal');
