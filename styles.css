@@ -902,6 +902,53 @@ ul.check-list li + li { margin-top: 0.4rem; }
   .footer {
     background: rgba(25, 12, 8, 0.72);
   }
+
+  /* Deep oak grain with a soft, water-like finish */
+  body {
+    background-color: #120806;
+    background-image:
+      radial-gradient(ellipse at 20% 18%, rgba(133, 78, 47, 0.18), transparent 34%),
+      radial-gradient(ellipse at 82% 72%, rgba(93, 58, 39, 0.16), transparent 38%),
+      repeating-linear-gradient(
+        171deg,
+        rgba(210, 157, 116, 0.08) 0,
+        rgba(210, 157, 116, 0.08) 1px,
+        transparent 1px,
+        transparent 8px,
+        rgba(38, 17, 11, 0.26) 9px,
+        transparent 12px,
+        transparent 22px
+      ),
+      repeating-linear-gradient(
+        168deg,
+        #160a07 0,
+        #21100b 17%,
+        #0f0605 35%,
+        #1d0d09 52%,
+        #100605 70%,
+        #1b0b08 100%
+      );
+    background-attachment: fixed;
+    background-size: auto, auto, 100% 180px, 100% 100%;
+  }
+
+  body::after {
+    position: fixed;
+    inset: -12%;
+    z-index: 0;
+    content: "";
+    background:
+      repeating-radial-gradient(
+        ellipse at 30% 50%,
+        transparent 0 18px,
+        rgba(190, 137, 99, 0.06) 19px 21px,
+        transparent 22px 42px
+      );
+    opacity: 0.55;
+    filter: blur(1.5px);
+    transform: rotate(-3deg) scale(1.08);
+    pointer-events: none;
+  }
   .nav-row { min-height: 70px; }
   .hero-copy h1 { font-size: 2rem; }
   .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem; }
