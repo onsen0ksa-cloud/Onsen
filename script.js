@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       audio.muted = true;
       audio.loop = true;
+      audio.preload = 'auto';
       audio.setAttribute('playsinline', '');
       audio.play().catch(() => {});
     } catch (error) {
@@ -113,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const unmute = () => {
       try {
         audio.muted = false;
-        audio.volume = 0.6;
+        audio.volume = 0.72;
         audio.play().catch(() => {});
       } catch (error) {
         // No-op.
@@ -142,10 +143,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealItems.forEach((item) => observer.observe(item));
 
-  document.querySelectorAll('.gallery-item img').forEach((img) => {
-    img.addEventListener('click', () => {
-      window.open(img.src, '_blank');
-    });
+  const galleryImages = Array.from(document.querySelectorAll('.gallery-item img'));
+  const lightbox = document.getElementById('gallery-lightbox');
+  const lightboxImage = lightbox?.querySelector('.lightbox-image');
+  const lightboxCaption = lightbox?.querySelector('.lightbox-caption');
+  let galleryIndex = 0;
+
+  const showGalleryImage = (index) => {
+    if (!lightbox || !lightboxImage || !lightboxCaption || !galleryImages.length) return;
+    galleryIndex = (index + galleryImages.length) % galleryImages.length;
+    const image = galleryImages[galleryIndex];
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    lightboxCaption.textContent = image.alt;
+    lightbox.hidden = false;
+    document.body.classList.add('lightbox-open');
+  };
+
+  const closeGallery = () => {
+    if (!lightbox) return;
+    lightbox.hidden = true;
+    document.body.classList.remove('lightbox-open');
+  };
+
+  galleryImages.forEach((image, index) => image.addEventListener('click', () => showGalleryImage(index)));
+  lightbox?.querySelector('.lightbox-close')?.addEventListener('click', closeGallery);
+  lightbox?.querySelector('.lightbox-prev')?.addEventListener('click', () => showGalleryImage(galleryIndex - 1));
+  lightbox?.querySelector('.lightbox-next')?.addEventListener('click', () => showGalleryImage(galleryIndex + 1));
+  lightbox?.addEventListener('click', (event) => {
+    if (event.target === lightbox) closeGallery();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (!lightbox || lightbox.hidden) return;
+    if (event.key === 'Escape') closeGallery();
+    if (event.key === 'ArrowLeft') showGalleryImage(galleryIndex - 1);
+    if (event.key === 'ArrowRight') showGalleryImage(galleryIndex + 1);
   });
 
   setTranslated(localStorage.getItem('onsen-language') || 'ar');

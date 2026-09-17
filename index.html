@@ -20,7 +20,7 @@
     "url": "https://onsen0ksa-cloud.github.io/Onsen/",
     "email": "Onsen0.ksa@gmail.com",
     "telephone": "+966543688231",
-    "image": "https://onsen0ksa-cloud.github.io/Onsen/logo-transparent.png",
+    "image": "https://onsen0ksa-cloud.github.io/Onsen/logo-modern.png?v=3",
     "description": "سبا ياباني فاخر يقدم جلسات المساج والحمام المغربي والياباني وطقوس الاسترخاء في السعودية.",
     "priceRange": "SAR 200-650",
     "areaServed": "Saudi Arabia",
@@ -80,7 +80,7 @@
   <header class="site-header">
     <div class="container nav-row">
       <a href="index.html" class="brand" aria-label="Onsen home">
-        <img src="logo-transparent.png" alt="Onsen logo">
+        <img src="logo-modern.png?v=3" alt="Onsen logo">
         <span>Onsen</span>
       </a>
 
@@ -107,7 +107,7 @@
         </div>
 
         <div class="hero-card reveal">
-          <img class="hero-photo" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85" alt="حمام أونسن حار هادئ وقت الغروب">
+          <img class="hero-photo" src="assets/hero-onsen.jpeg?v=9" alt="حمام أونسن حار هادئ مع إطلالة جبلية وشعار أونسن">
           <div class="minor-card">
             <span>تجربة الأونسن المميزة</span>
             <strong>90 دقيقة</strong>
@@ -185,14 +185,53 @@
         <p>اكتشف الأجواء والتفاصيل والطقوس التي تميز تجربة أونسن.</p>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85" alt="بوابة يابانية وسط الطبيعة"></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?auto=format&fit=crop&w=900&q=85" alt="ينابيع ساخنة في اليابان"></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=900&q=85" alt="أزهار الساكورا والسكينة"></div>
+      <h3 class="gallery-subtitle">منتجات وطقوس العناية</h3>
+      <div class="gallery-grid gallery-products">
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-01.jpeg" alt="منتجات العناية الفاخرة في أونسن"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-02.jpeg" alt="زيوت ولوشنات جلسات أونسن"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-04.jpeg" alt="تفاصيل منتجات الاسترخاء والعناية"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-05.jpeg" alt="منتجات طقوس المساج في أونسن"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-09.jpeg" alt="مستلزمات الحمام الياباني في أونسن"></div>
+      </div>
+
+      <h3 class="gallery-subtitle">المكان والأجواء</h3>
+      <div class="gallery-grid gallery-venue">
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-03.jpeg" alt="ديكور أونسن الياباني الهادئ"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-06.jpeg" alt="زاوية طبيعية هادئة داخل أونسن"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-08.jpeg" alt="أجواء سبا يابانية عصرية"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-10.jpeg" alt="إضاءة دافئة في مكان أونسن"></div>
       </div>
     </section>
 
-    <audio id="ambient-audio" autoplay loop muted playsinline aria-hidden="true">
+    <section id="reviews" class="section reviews-section container reveal">
+      <div class="section-header">
+        <h2>آراء ضيوف أونسن</h2>
+        <p>اطّلع على أحدث التقييمات والتعليقات الموثقة من ضيوفنا عبر Google Maps.</p>
+      </div>
+      <div class="reviews-panel">
+        <div>
+          <span class="review-stars" aria-label="تقييم Google">★★★★★</span>
+          <strong class="review-rating">4.9 / 5</strong>
+          <p class="muted">تقييم الضيوف على Google</p>
+        </div>
+        <div class="review-copy">
+          <p>نحرص على أن تكون كل زيارة هادئة، خاصة، ومصممة بعناية. اقرأ التعليقات الإيجابية الأخيرة وتعرّف على تجربة الضيوف مباشرة.</p>
+          <a class="btn primary" href="https://maps.app.goo.gl/XB1RgDi8UA3HwiJ76?g_st=aw" target="_blank" rel="noopener">اقرأ تقييمات Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="عرض صور أونسن" hidden>
+      <button class="lightbox-close" type="button" aria-label="إغلاق">×</button>
+      <button class="lightbox-control lightbox-prev" type="button" aria-label="الصورة السابقة">‹</button>
+      <figure>
+        <img class="lightbox-image" alt="">
+        <figcaption class="lightbox-caption"></figcaption>
+      </figure>
+      <button class="lightbox-control lightbox-next" type="button" aria-label="الصورة التالية">›</button>
+    </div>
+
+    <audio id="ambient-audio" autoplay loop muted playsinline preload="auto" aria-hidden="true">
       <source src="assets/rainy-japanese-ambient.wav" type="audio/wav">
     </audio>
 
@@ -216,6 +255,7 @@
         <article class="info-card">
           <h3>الموقع</h3>
           <p>منتجع عافية فاخر في المملكة العربية السعودية يستقبل الأفراد والمجموعات الصغيرة.</p>
+          <a class="btn primary" href="https://maps.app.goo.gl/XB1RgDi8UA3HwiJ76?g_st=aw" target="_blank" rel="noopener" style="margin-top:1rem;">افتح الموقع على Google Maps</a>
         </article>
       </div>
     </section>
