@@ -107,8 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
     audio.loop = true;
     audio.preload = 'auto';
     audio.setAttribute('playsinline', '');
-    audio.play().catch(() => {});
-
+    audio.load();
+    const startAmbient = () => {
+      audio.play().catch(() => {});
+    };
+    if (audio.readyState >= 2) startAmbient();
+    else audio.addEventListener('canplaythrough', startAmbient, { once: true });
   }
 
   const revealItems = document.querySelectorAll('.reveal');
