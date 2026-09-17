@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (!location.hash) window.scrollTo(0, 0);
   const yearNode = document.getElementById('year');
   if (yearNode) yearNode.textContent = new Date().getFullYear();
 

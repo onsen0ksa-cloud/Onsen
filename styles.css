@@ -284,7 +284,7 @@ button, input, textarea { font: inherit; }
 
 .hero-card {
   position: relative;
-  grid-column: 1 / -1;
+  grid-column: auto;
   background: transparent;
   border: 0;
   border-radius: 0;
@@ -293,16 +293,14 @@ button, input, textarea { font: inherit; }
 }
 
 .hero-photo {
-  position: relative;
-  left: 50%;
-  width: 100vw;
-  max-width: none;
-  transform: translateX(-50%);
+  width: 100%;
+  max-width: 640px;
+  margin-inline: auto;
   height: auto;
   min-height: 0;
   object-fit: contain;
-  border-radius: 0;
-  box-shadow: none;
+  border-radius: 24px;
+  box-shadow: 0 18px 42px rgba(59, 11, 22, 0.16);
 }
 
 .minor-card {
@@ -601,6 +599,31 @@ body.lightbox-open { overflow: hidden; }
 
 .review-copy p { max-width: 48rem; margin: 0 0 1rem; color: var(--muted); }
 
+.review-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.review-link {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem;
+  border: 1px solid rgba(65, 107, 89, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.52);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.review-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--sky);
+}
+
+.review-link strong { color: var(--primary-deep); }
+.review-link span { color: var(--muted); font-size: 0.9rem; }
+
 .music-box {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -786,6 +809,7 @@ ul.check-list li + li { margin-top: 0.4rem; }
   }
 
   .reviews-panel { grid-template-columns: 1fr; }
+  .review-links { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
