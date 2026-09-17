@@ -346,6 +346,15 @@ button, input, textarea { font: inherit; }
   text-shadow: 1px 2px 0 rgba(201, 169, 130, 0.22);
 }
 
+.section h3 {
+  font-family: "Amiri", "Noto Naskh Arabic", Georgia, serif;
+  background: linear-gradient(110deg, var(--primary-deep) 0%, var(--primary) 45%, var(--forest) 74%, var(--sky) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 1px 2px 0 rgba(201, 169, 130, 0.18);
+}
+
 .section-header p {
   margin: 0;
   color: var(--muted);
@@ -463,8 +472,7 @@ button, input, textarea { font: inherit; }
 
 .gallery-subtitle {
   margin: 2rem 0 1rem;
-  color: var(--primary-deep);
-  font-size: 1.45rem;
+  font-size: 1.2rem;
 }
 
 .gallery-item {
@@ -610,6 +618,26 @@ body.lightbox-open { overflow: hidden; }
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.google-review-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0 1.2rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(65, 107, 89, 0.25);
+  border-radius: 999px;
+  color: var(--primary-deep);
+  background: rgba(255, 255, 255, 0.65);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-review-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(32, 63, 55, 0.12);
 }
 
 .testimonial {
