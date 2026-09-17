@@ -219,7 +219,8 @@ button, input, textarea { font: inherit; }
 }
 
 .hero-copy h1 {
-  font-family: "Segoe UI", Inter, Arial, sans-serif;
+  font-family: "Aref Ruqaa", "Noto Naskh Arabic", Georgia, serif;
+  font-weight: 700;
   margin: 0;
   font-size: clamp(2.8rem, 6vw, 5rem);
   line-height: 1.2;
@@ -228,13 +229,13 @@ button, input, textarea { font: inherit; }
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 0 10px 28px rgba(59, 11, 22, 0.12);
+  text-shadow: 2px 3px 0 rgba(201, 169, 130, 0.32), 0 10px 28px rgba(59, 11, 22, 0.12);
 }
 
 .hero-signature {
   flex-basis: 100%;
   margin: 0 0 0.2rem;
-  font-family: "Segoe UI", Inter, Arial, sans-serif;
+  font-family: "Aref Ruqaa", "Noto Naskh Arabic", Georgia, serif;
   color: var(--forest);
   font-size: 1.25rem;
   font-weight: 700;
@@ -459,7 +460,7 @@ button, input, textarea { font: inherit; }
 
 .gallery-item {
   grid-column: span 4;
-  min-height: 290px;
+  min-height: 220px;
   overflow: hidden;
   border-radius: 24px;
   border: 1px solid rgba(65, 107, 89, 0.22);
@@ -469,7 +470,7 @@ button, input, textarea { font: inherit; }
 }
 
 .gallery-item:nth-child(1),
-.gallery-item:nth-child(6) { grid-column: span 6; }
+.gallery-item:nth-child(6) { grid-column: span 4; }
 
 .gallery-item:hover {
   transform: translateY(-5px);
@@ -479,7 +480,7 @@ button, input, textarea { font: inherit; }
 .gallery-item img {
   width: 100%;
   height: 100%;
-  min-height: 290px;
+  min-height: 220px;
   object-fit: cover;
   filter: saturate(0.86) contrast(0.96);
   cursor: pointer;
@@ -599,30 +600,29 @@ body.lightbox-open { overflow: hidden; }
 
 .review-copy p { max-width: 48rem; margin: 0 0 1rem; color: var(--muted); }
 
-.review-links {
+.testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.review-link {
+.testimonial {
   display: grid;
   gap: 0.25rem;
   padding: 1rem;
   border: 1px solid rgba(65, 107, 89, 0.2);
-  border-radius: 16px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.52);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 12px 28px rgba(32, 63, 55, 0.08);
 }
 
-.review-link:hover {
-  transform: translateY(-2px);
-  border-color: var(--sky);
+.testimonial blockquote {
+  margin: 0.25rem 0 0;
+  color: var(--ink);
+  font-size: 1.02rem;
 }
 
-.review-link strong { color: var(--primary-deep); }
-.review-link span { color: var(--muted); font-size: 0.9rem; }
+.testimonial cite { color: var(--muted); font-size: 0.9rem; font-style: normal; }
 
 .music-box {
   display: grid;
@@ -639,9 +639,33 @@ body.lightbox-open { overflow: hidden; }
   display: none;
 }
 
-#ambient-audio {
-  display: none;
+.ambient-player {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.7rem 0.55rem 0.9rem;
+  border: 1px solid rgba(32, 63, 55, 0.22);
+  border-radius: 999px;
+  background: rgba(234, 220, 207, 0.94);
+  box-shadow: 0 10px 24px rgba(32, 63, 55, 0.16);
+  color: var(--forest);
+  font-size: 0.85rem;
 }
+
+.ambient-player .btn {
+  min-height: 36px;
+  padding: 0.45rem 0.85rem;
+  border: 0;
+  background: var(--forest);
+  color: #fff;
+  cursor: pointer;
+}
+
+#ambient-audio { display: none; }
 
 .music-actions {
   display: flex;
@@ -808,8 +832,8 @@ ul.check-list li + li { margin-top: 0.4rem; }
     padding: 1rem;
   }
 
-  .reviews-panel { grid-template-columns: 1fr; }
-  .review-links { grid-template-columns: 1fr; }
+  .reviews-panel,
+  .testimonial-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
@@ -818,4 +842,5 @@ ul.check-list li + li { margin-top: 0.4rem; }
   .cta-row { flex-direction: column; align-items: stretch; }
   .btn { width: 100%; }
   .section { padding: 4rem 0; }
+  .ambient-player { left: 0.65rem; bottom: 0.65rem; }
 }

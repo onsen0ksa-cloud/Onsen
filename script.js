@@ -100,36 +100,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const audio = document.getElementById('ambient-audio');
+  const ambientToggle = document.getElementById('ambient-toggle');
 
   if (audio) {
-    try {
-      audio.muted = true;
-      audio.loop = true;
-      audio.preload = 'auto';
-      audio.setAttribute('playsinline', '');
+    audio.muted = true;
+    audio.loop = true;
+    audio.preload = 'auto';
+    audio.setAttribute('playsinline', '');
+    audio.play().catch(() => {});
+
+    ambientToggle?.addEventListener('click', () => {
+      audio.muted = !audio.muted;
+      audio.volume = 0.72;
       audio.play().catch(() => {});
-    } catch (error) {
-      // No-op if browser blocks autoplay.
-    }
-
-    const unmute = () => {
-      try {
-        audio.muted = false;
-        audio.volume = 0.72;
-        audio.play().catch(() => {});
-      } catch (error) {
-        // No-op.
-      }
-    };
-
-    const onFirstGesture = () => {
-      unmute();
-      document.removeEventListener('click', onFirstGesture);
-      document.removeEventListener('keydown', onFirstGesture);
-    };
-
-    document.addEventListener('click', onFirstGesture, { once: true });
-    document.addEventListener('keydown', onFirstGesture, { once: true });
+      ambientToggle.textContent = audio.muted ? 'تشغيل الصوت' : 'كتم الصوت';
+      ambientToggle.setAttribute('aria-pressed', String(!audio.muted));
+    });
   }
 
   const revealItems = document.querySelectorAll('.reveal');
