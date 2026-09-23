@@ -675,6 +675,33 @@ body.lightbox-open { overflow: hidden; }
 
 #ambient-audio { display: none; }
 
+.audio-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 25;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(105, 21, 37, 0.24);
+  border-radius: 999px;
+  background: rgba(247, 243, 239, 0.94);
+  color: var(--primary-deep);
+  box-shadow: 0 10px 24px rgba(59, 11, 22, 0.18);
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.audio-toggle:hover,
+.audio-toggle.is-playing {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 .music-actions {
   display: flex;
   flex-direction: column;
@@ -860,4 +887,5 @@ ul.check-list li + li { margin-top: 0.4rem; }
   .hero-photo { border-radius: 18px; }
   .minor-card { right: 0.75rem; bottom: 0.75rem; max-width: 180px; }
   .lightbox-control { width: 40px; height: 56px; font-size: 2.4rem; }
+  .audio-toggle { right: 0.65rem; bottom: 0.65rem; font-size: 0.82rem; }
 }

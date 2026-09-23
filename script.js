@@ -107,12 +107,62 @@ document.addEventListener('DOMContentLoaded', () => {
     audio.loop = true;
     audio.preload = 'auto';
     audio.setAttribute('playsinline', '');
-    audio.load();
-    const startAmbient = () => {
-      audio.play().catch(() => {});
+    const audioToggle = document.getElementById('audio-toggle');
+    const audioLabel = audioToggle?.querySelector('[data-audio-label]');
+    let audioStarted = false;
+
+    const updateAudioControl = (isPlaying) => {
+      if (!audioToggle) return;
+      audioToggle.setAttribute('aria-pressed', String(isPlaying));
+      audioToggle.classList.toggle('is-playing', isPlaying);
+      if (audioLabel) {
+        audioLabel.textContent = isPlaying ? 'إيقاف الأجواء الصوتية' : 'تشغيل الأجواء الصوتية';
+      }
     };
-    if (audio.readyState >= 2) startAmbient();
-    else audio.addEventListener('canplaythrough', startAmbient, { once: true });
+
+    const startAmbient = async (withSound = false) => {
+      if (withSound) {
+        audio.muted = false;
+        audio.volume = 0.62;
+      }
+      try {
+        await audio.play();
+        audioStarted = true;
+        updateAudioControl(!audio.paused && !audio.muted);
+      } catch {
+        updateAudioControl(false);
+      }
+    };
+
+    audio.addEventListener('error', () => {
+      updateAudioControl(false);
+      if (audio.currentSrc.endsWith('rainy-japanese-ambient.wav')) {
+        audio.src = 'assets/ambient.mp3';
+        audio.load();
+      }
+    });
+    audio.addEventListener('pause', () => updateAudioControl(false));
+    audio.addEventListener('play', () => updateAudioControl(!audio.muted));
+    audioToggle?.addEventListener('click', async () => {
+      if (!audio.paused && !audio.muted) {
+        audio.pause();
+        audio.muted = true;
+        updateAudioControl(false);
+        return;
+      }
+      await startAmbient(true);
+    });
+
+    audio.load();
+    startAmbient();
+
+    const enableAfterGesture = () => {
+      if (!audioStarted || audio.muted) startAmbient(true);
+      window.removeEventListener('pointerdown', enableAfterGesture);
+      window.removeEventListener('keydown', enableAfterGesture);
+    };
+    window.addEventListener('pointerdown', enableAfterGesture, { once: true, passive: true });
+    window.addEventListener('keydown', enableAfterGesture, { once: true });
   }
 
   const revealItems = document.querySelectorAll('.reveal');
