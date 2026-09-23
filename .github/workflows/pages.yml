@@ -22,10 +22,21 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Assemble clean Pages site
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site/assets/gallery
+          cp index.html booking.html menu.html services.html script.js styles.css \
+            logo-modern.png logo-transparent.png logo.png robots.txt sitemap.xml security.txt _site/
+          cp assets/hero-onsen.jpeg assets/ambient.mp3 \
+            assets/japanese-ambient.wav assets/rainy-japanese-ambient.wav _site/assets/
+          cp assets/gallery/* _site/assets/gallery/
+          touch _site/.nojekyll
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: '.'
+          path: '_site'
 
   deploy:
     needs: build

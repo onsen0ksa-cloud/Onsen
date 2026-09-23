@@ -286,6 +286,10 @@ button, input, textarea { font: inherit; }
   box-shadow: 0 16px 30px rgba(92, 61, 42, 0.22);
 }
 
+.mt-1 { margin-top: 1rem; }
+.mt-125 { margin-top: 1.25rem; }
+.btn-fit { width: fit-content; }
+
 .hero-card {
   position: relative;
   grid-column: auto;
