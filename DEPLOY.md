@@ -13,7 +13,7 @@ How to deploy
 Prepare assets before deploying
 
 - Add your logo at: logo-placeholder.png (replace in repo root).
-- Add ambient track at: assets/ambient.mp3
+- The homepage soundscape is stored at: assets/onsen-rain-chimes.wav (48 kHz stereo WAV).
 - Replace Unsplash gallery images in index.html with your own photos.
 
 Custom domain
