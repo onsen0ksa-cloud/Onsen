@@ -146,11 +146,21 @@ document.addEventListener('DOMContentLoaded', () => {
       if (ambientToggle) {
         ambientToggle.textContent = isEnglish
           ? (audio.muted ? 'Play sound' : 'Mute sound')
-          : (audio.muted ? 'تشغيل الصوت' : 'كتم الصوت');
+          : (audio.muted ? 'تشغيل الصوت' : 'إيقاف الأجواء الصوتية');
         ambientToggle.setAttribute('aria-pressed', String(!audio.muted));
       }
       if (ambientStatus && message) ambientStatus.textContent = isEnglish ? (englishMessages[message] || message) : message;
     };
+
+    audio.addEventListener('error', () => {
+      syncAmbientControl('تعذر التشغيل، حاول مرة أخرى');
+    });
+    audio.addEventListener('play', () => {
+      syncAmbientControl(audio.muted ? 'الأجواء الصوتية جاهزة' : 'الأجواء الصوتية تعمل');
+    });
+    audio.addEventListener('pause', () => {
+      syncAmbientControl('الأجواء الصوتية مكتومة');
+    });
 
     audio.play()
       .then(() => syncAmbientControl('الأجواء الصوتية جاهزة'))
@@ -158,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ambientToggle?.addEventListener('click', async () => {
       if (!audio.muted) {
+        audio.pause();
         audio.muted = true;
         syncAmbientControl('الأجواء الصوتية مكتومة');
         return;
