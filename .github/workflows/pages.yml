@@ -30,7 +30,7 @@ jobs:
           cp index.html booking.html menu.html services.html script.js styles.css \
             logo-modern.png logo-transparent.png logo.png robots.txt sitemap.xml security.txt _site/
           cp .well-known/security.txt _site/.well-known/security.txt
-          cp assets/hero-onsen.jpeg assets/onsen-rain-chimes.wav _site/assets/
+          cp assets/hero-onsen.jpeg assets/onsen-rainfall.mp3 _site/assets/
           cp assets/gallery/* _site/assets/gallery/
           touch _site/.nojekyll
       - name: Upload Pages artifact
