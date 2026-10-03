@@ -85,7 +85,14 @@
         <span>Onsen</span>
       </a>
 
-      <a class="menu-page-link" href="menu.html">☰ القائمة</a>
+      <nav class="site-nav" aria-label="التنقل الرئيسي">
+        <a href="index.html" class="active">الرئيسية</a>
+        <a href="menu.html">القائمة</a>
+        <a href="services.html">الخدمات</a>
+        <a href="#gallery">المعرض</a>
+        <a href="booking.html">الحجز</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
       <div class="language-switcher" aria-label="اختيار اللغة">
         <button type="button" data-language="ar" class="active">العربية</button>
         <button type="button" data-language="en">English</button>
@@ -108,7 +115,7 @@
         </div>
 
         <div class="hero-card reveal">
-          <img class="hero-photo" src="assets/hero-onsen.jpeg?v=9" alt="حمام أونسن حار هادئ مع إطلالة جبلية وشعار أونسن">
+          <img class="hero-photo" src="assets/hero-onsen.jpeg?v=9" alt="حمام أونسن حار هادئ مع إطلالة جبلية وشعار أونسن" fetchpriority="high">
           <div class="minor-card">
             <span>تجربة الأونسن المميزة</span>
             <strong>60 دقيقة</strong>
@@ -151,10 +158,15 @@
 
     <section class="section full-bleed container reveal">
       <div class="full-bleed-grid">
+        <figure class="full-bleed-image">
+          <img src="assets/gallery/onsen-gallery-06.jpeg" alt="مساحة استرخاء هادئة بتفاصيل مستوحاة من اليابان" loading="lazy" decoding="async">
+          <figcaption>مساحة هادئة صُممت لتمنحك وقتاً لنفسك</figcaption>
+        </figure>
         <div class="callout">
+          <span class="eyebrow">لحظتك تبدأ هنا</span>
           <h3>صُمم للراحة العميقة.</h3>
           <p class="muted">صُمم منتجعنا حول فكرة التوقف الواعي: مشتتات أقل وتوازن أكبر وإحساس أعمق بالعافية.</p>
-          <a class="btn primary" href="services.html" style="margin-top:1.25rem; width: fit-content;">عرض العلاجات</a>
+          <a class="btn primary" href="services.html">عرض العلاجات</a>
         </div>
       </div>
     </section>
@@ -167,19 +179,19 @@
 
       <h3 class="gallery-subtitle">صور المتجر</h3>
       <div class="gallery-grid gallery-store">
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-03.jpeg" alt="ديكور متجر أونسن الياباني الهادئ"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-08.jpeg" alt="أجواء متجر أونسن العصرية"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-10.jpeg" alt="إضاءة دافئة في متجر أونسن"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-06.jpeg" alt="مساحة الاسترخاء في أونسن" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-08.jpeg" alt="أجواء متجر أونسن العصرية" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-10.jpeg" alt="إضاءة دافئة في متجر أونسن" loading="lazy" decoding="async"></div>
       </div>
 
       <h3 class="gallery-subtitle">صور المنتجات</h3>
       <div class="gallery-grid gallery-products">
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-01.jpeg" alt="منتجات العناية الفاخرة في أونسن"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-02.jpeg" alt="زيوت ولوشنات جلسات أونسن"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-06.jpeg" alt="زاوية هادئة داخل متجر أونسن"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-04.jpeg" alt="تفاصيل منتجات الاسترخاء والعناية"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-05.jpeg" alt="منتجات طقوس المساج في أونسن"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-product-bath-bomb.png" alt="كرة حمام معطرة من منتجات أونسن"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-01.jpeg" alt="منتجات العناية الفاخرة في أونسن" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-02.jpeg" alt="زيوت ولوشنات جلسات أونسن" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-03.jpeg" alt="تفاصيل منتجات العناية في أونسن" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-04.jpeg" alt="تفاصيل منتجات الاسترخاء والعناية" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-05.jpeg" alt="منتجات طقوس المساج في أونسن" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-product-bath-bomb.png" alt="كرة حمام معطرة من منتجات أونسن" loading="lazy" decoding="async"></div>
       </div>
     </section>
 
@@ -211,8 +223,12 @@
       <button class="lightbox-control lightbox-next" type="button" aria-label="الصورة التالية">›</button>
     </div>
 
+    <div class="ambient-player" role="group" aria-label="التحكم في الأجواء الصوتية">
+      <span id="ambient-status" aria-live="polite">الأجواء الصوتية هادئة</span>
+      <button class="btn" id="ambient-toggle" type="button" aria-pressed="false">تشغيل الصوت</button>
+    </div>
     <audio id="ambient-audio" autoplay loop muted playsinline preload="auto" aria-hidden="true">
-      <source src="assets/rainy-japanese-ambient.wav" type="audio/wav">
+      <source src="assets/ambient.mp3" type="audio/mpeg">
     </audio>
 
     <section id="contact" class="section container reveal">
