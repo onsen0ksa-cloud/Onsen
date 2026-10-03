@@ -13,7 +13,7 @@ How to deploy
 Prepare assets before deploying
 
 - Add your logo at: logo-placeholder.png (replace in repo root).
-- The homepage soundscape is stored at: assets/onsen-rain-chimes.wav (48 kHz stereo WAV).
+- The homepage rainfall recording is stored at: assets/onsen-rainfall.mp3. It is "Rain Fall Through Trees" by acollier123, dedicated to the public domain under CC0 1.0 (https://freesound.org/people/acollier123/sounds/242956).
 - Replace Unsplash gallery images in index.html with your own photos.
 
 Custom domain

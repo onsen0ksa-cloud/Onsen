@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ['“A warm, relaxing experience with a team that makes you feel cared for.”', '“تجربة دافئة ومريحة، والطاقم متعاون ويمنحك إحساساً بالاهتمام.”'],
       ],
       '.testimonial cite': ['Onsen guest', 'ضيف من أونسن'],
-      '.ambient-player span': ['Ambient sound', 'الأجواء الصوتية هادئة'],
-      '#ambient-toggle': ['Play sound', 'تشغيل الصوت'],
+      '.ambient-player span': ['Rain sounds ready', 'صوت المطر جاهز'],
+      '#ambient-toggle': ['Play rain', 'تشغيل صوت المطر'],
       '#contact .section-header h2': [['Plan your visit', 'خطط لزيارتك']],
       '#contact .section-header p': [['Reserve a retreat, ask about private experiences, or enquire about group sessions.', 'احجز تجربتك أو اسأل عن الجلسات الخاصة أو المواعيد الجماعية.']],
     },
@@ -161,17 +161,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const syncAmbientControl = (message) => {
       const englishMessages = {
-        'الأجواء الصوتية جاهزة': 'Ambient sound is ready',
-        'اضغط لتشغيل الأجواء الصوتية': 'Click to play ambient sound',
-        'الأجواء الصوتية مكتومة': 'Ambient sound is muted',
-        'الأجواء الصوتية تعمل': 'Ambient sound is playing',
-        'تعذر التشغيل، حاول مرة أخرى': 'Unable to play sound. Try again.',
+        'صوت المطر جاهز': 'Rain is ready',
+        'اضغط لتشغيل صوت المطر': 'Tap to hear the rain',
+        'صوت المطر مكتوم': 'Rain is muted',
+        'صوت المطر يعمل': 'Rain is playing',
+        'تعذر التشغيل، حاول مرة أخرى': 'Unable to play rain. Try again.',
       };
       const isEnglish = document.documentElement.lang === 'en';
       if (ambientToggle) {
         ambientToggle.textContent = isEnglish
-          ? (audio.muted ? 'Play sound' : 'Mute sound')
-          : (audio.muted ? 'تشغيل الصوت' : 'إيقاف الأجواء الصوتية');
+          ? (audio.muted ? 'Play rain' : 'Mute rain')
+          : (audio.muted ? 'تشغيل صوت المطر' : 'كتم صوت المطر');
         ambientToggle.setAttribute('aria-pressed', String(!audio.muted));
       }
       if (ambientStatus && message) ambientStatus.textContent = isEnglish ? (englishMessages[message] || message) : message;
@@ -181,21 +181,21 @@ document.addEventListener('DOMContentLoaded', () => {
       syncAmbientControl('تعذر التشغيل، حاول مرة أخرى');
     });
     audio.addEventListener('play', () => {
-      syncAmbientControl(audio.muted ? 'الأجواء الصوتية جاهزة' : 'الأجواء الصوتية تعمل');
+      syncAmbientControl(audio.muted ? 'صوت المطر جاهز' : 'صوت المطر يعمل');
     });
     audio.addEventListener('pause', () => {
-      syncAmbientControl('الأجواء الصوتية مكتومة');
+      syncAmbientControl('صوت المطر مكتوم');
     });
 
     audio.play()
-      .then(() => syncAmbientControl('الأجواء الصوتية جاهزة'))
-      .catch(() => syncAmbientControl('اضغط لتشغيل الأجواء الصوتية'));
+      .then(() => syncAmbientControl('صوت المطر جاهز'))
+      .catch(() => syncAmbientControl('اضغط لتشغيل صوت المطر'));
 
     ambientToggle?.addEventListener('click', async () => {
       if (!audio.muted) {
         audio.pause();
         audio.muted = true;
-        syncAmbientControl('الأجواء الصوتية مكتومة');
+        syncAmbientControl('صوت المطر مكتوم');
         return;
       }
 
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
       audio.volume = 0.55;
       try {
         await audio.play();
-        syncAmbientControl('الأجواء الصوتية تعمل');
+        syncAmbientControl('صوت المطر يعمل');
       } catch {
         audio.muted = true;
         syncAmbientControl('تعذر التشغيل، حاول مرة أخرى');
