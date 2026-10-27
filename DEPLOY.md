@@ -10,6 +10,18 @@ How to deploy
 - Or run the workflow manually: GitHub -> Actions -> Deploy to GitHub Pages -> Run workflow (workflow_dispatch).
 - Wait for Actions to complete. After the first successful run, the Pages site URL appears in the repository Settings -> Pages.
 
+Google reviews
+
+The homepage loads current reviews with the Google Maps JavaScript API Places library. To enable them:
+
+1. In Google Cloud, enable the Maps JavaScript API and Places API (New), attach a billing account, and create a browser API key.
+2. Restrict the key to the website referrer `https://onsen0ksa-cloud.github.io/*` and only the APIs this site uses. Set appropriate quotas and billing alerts.
+3. Find the business Place ID with Google's [Place ID finder](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder).
+4. In the repository, open Settings -> Secrets and variables -> Actions -> Variables and add `GOOGLE_MAPS_API_KEY` and `GOOGLE_PLACE_ID`.
+5. Run the Deploy to GitHub Pages workflow, or push a change to a deployment branch.
+
+The browser key is included in the published HTML by design, so it must be restricted in Google Cloud; do not commit an unrestricted key to the repository. Without both variables, the page displays a setup status instead of silently leaving an empty reviews area. Before enabling Places content, publish Terms of Use and a Privacy Policy that meet Google's Places API policy requirements.
+
 Prepare assets before deploying
 
 - Add your logo at: logo-placeholder.png (replace in repo root).
@@ -22,5 +34,4 @@ Custom domain
 
 Notes
 
-- The workflow currently uploads the repository root (path: '.') as the artifact. If you'd rather publish only a "public/" folder, update the "path" in the workflow to point to that folder.
-- The workflow includes a manual trigger so you can run it even if you don't push to main.
+- The workflow assembles a clean site artifact before deployment and also supports a manual trigger.

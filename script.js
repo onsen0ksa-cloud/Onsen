@@ -143,9 +143,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const googleMapsUrl = 'https://maps.app.goo.gl/XB1RgDi8UA3HwiJ76?g_st=aw';
   let googlePlaceData = null;
   let googleReviewData = [];
+  let googleReviewsStatus = 'loading';
+  const googleReviewsMessages = {
+    ar: {
+      loading: 'جارٍ تحميل المراجعات من Google Maps…',
+      missingKey: 'لم تُفعّل المراجعات بعد. أضف متغير GOOGLE_MAPS_API_KEY إلى إعدادات Actions في المستودع.',
+      missingPlaceId: 'تعذر تحديد صفحة أونسن على Google Maps. أضف معرّف المكان GOOGLE_PLACE_ID إلى إعدادات Actions.',
+      failed: 'تعذر تحميل المراجعات. تحقق من مفتاح Google Maps والفوترة وقيود واجهة API، أو اقرأها مباشرة على Google Maps.',
+    },
+    en: {
+      loading: 'Loading reviews from Google Maps…',
+      missingKey: 'Reviews are not enabled yet. Add the GOOGLE_MAPS_API_KEY Actions variable in the repository settings.',
+      missingPlaceId: 'The Onsen Google Maps listing could not be identified. Add its GOOGLE_PLACE_ID Actions variable.',
+      failed: 'Reviews could not load. Check the Google Maps key, billing, and API restrictions, or read them directly on Google Maps.',
+    },
+  };
 
   syncGoogleReviews = (language) => {
-    if (!googlePlaceData || !reviewsList || !reviewsStatus) return;
+    if (!reviewsList || !reviewsStatus) return;
+    if (!googlePlaceData) {
+      reviewsStatus.textContent = googleReviewsMessages[language][googleReviewsStatus];
+      return;
+    }
+
     reviewsList.replaceChildren();
     googleReviewData.forEach((review) => {
       const card = document.createElement('article');
@@ -187,12 +207,24 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const showGoogleReviews = async () => {
-    if (!mapsApiKey || !placeId || !reviewsList || !reviewsStatus) return;
+    if (!reviewsList || !reviewsStatus) return;
+    const language = document.documentElement.lang === 'en' ? 'en' : 'ar';
+    if (!mapsApiKey) {
+      googleReviewsStatus = 'missingKey';
+      syncGoogleReviews(language);
+      return;
+    }
+    if (!placeId) {
+      googleReviewsStatus = 'missingPlaceId';
+      syncGoogleReviews(language);
+      return;
+    }
+    googleReviewsStatus = 'loading';
+    syncGoogleReviews(language);
 
     try {
       const mapsScript = document.createElement('script');
-      const language = document.documentElement.lang === 'en' ? 'en' : 'ar';
-      mapsScript.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(mapsApiKey)}&libraries=places&v=weekly&language=${language}`;
+      mapsScript.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(mapsApiKey)}&libraries=places&v=weekly&language=${language}&region=SA`;
       mapsScript.async = true;
       mapsScript.referrerPolicy = 'strict-origin-when-cross-origin';
       const scriptLoaded = new Promise((resolve, reject) => {
@@ -211,9 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
       syncGoogleReviews(document.documentElement.lang === 'en' ? 'en' : 'ar');
     } catch (error) {
       console.error('Unable to load Google Maps reviews:', error);
-      reviewsStatus.textContent = document.documentElement.lang === 'en'
-        ? 'Reviews could not load. You can read them directly on Google Maps.'
-        : 'تعذر تحميل التقييمات الآن. يمكنك الاطلاع عليها مباشرة على Google Maps.';
+      googleReviewsStatus = 'failed';
+      syncGoogleReviews(document.documentElement.lang === 'en' ? 'en' : 'ar');
     }
   };
   showGoogleReviews();
