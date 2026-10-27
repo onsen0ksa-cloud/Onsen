@@ -3,20 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://wa.me mailto:; img-src 'self' data: https:; media-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' https://wa.me mailto:; img-src 'self'; media-src 'self'; script-src 'self' https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://maps.googleapis.com https://maps.gstatic.com https://places.googleapis.com; upgrade-insecure-requests;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
   <title>أونسن في الرياض | سبا ياباني فاخر</title>
-  <meta name="description" content="أونسن سبا ياباني في الرياض يقدم جلسات المساج والحمام المغربي وحمام إسترخائي وطقوس عافية في أجواء هادئة.">
+  <meta name="description" content="أونسن سبا ياباني في الرياض يقدم جلسات شياتسو وتايلندي وسويدي، حماماً مغربياً ويابانياً، عناية وباقات مميزة.">
   <meta name="author" content="Onsen Spa & Wellness">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#f7f3ef">
+  <!-- Configure only a browser API key restricted to this site, plus the business Place ID. -->
+  <meta name="google-maps-api-key" content="">
+  <meta name="google-place-id" content="">
   <meta property="og:site_name" content="Onsen Spa & Wellness">
   <meta property="og:locale" content="ar_SA">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:url" content="https://onsen0ksa-cloud.github.io/Onsen/">
   <meta property="og:title" content="أونسن في الرياض | سبا ياباني فاخر">
-  <meta property="og:description" content="تجربة أونسن هادئة مع جلسات المساج والحمام المغربي وحمام إسترخائي وطقوس العافية الفاخرة.">
+  <meta property="og:description" content="جلسات مساج ياباني وتايلندي وسويدي، حمامات مغربية ويابانية، وباقات عافية فاخرة في أونسن.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://onsen0ksa-cloud.github.io/Onsen/assets/hero-onsen.jpeg">
   <meta property="og:image:alt" content="أجواء أونسن اليابانية الهادئة">
@@ -27,7 +29,7 @@
   <meta name="twitter:image:alt" content="أجواء أونسن اليابانية الهادئة">
   <link rel="canonical" href="https://onsen0ksa-cloud.github.io/Onsen/">
   <link rel="icon" type="image/png" href="logo-modern.png?v=4">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,18 +41,34 @@
     "telephone": "+966543688231",
     "image": "https://onsen0ksa-cloud.github.io/Onsen/logo-modern.png?v=3",
     "logo": "https://onsen0ksa-cloud.github.io/Onsen/logo-modern.png",
-    "description": "سبا ياباني في الرياض يقدم جلسات المساج والحمام المغربي وحمام إسترخائي وطقوس الاسترخاء.",
-    "priceRange": "SAR 200-650",
+    "description": "سبا ياباني في الرياض يقدم جلسات شياتسو وتايلندي وسويدي وحمامات مغربية ويابانية وباقات عافية.",
+    "priceRange": "SAR 180-500",
     "areaServed": "Saudi Arabia",
-    "serviceType": ["جلسات المساج", "الحمام المغربي", "حمام إسترخائي", "طقوس الاسترخاء"],
+    "serviceType": ["مساج شياتسو ياباني", "مساج تايلندي أرضي", "مساج استرخائي سويدي", "مساج 3 في 1", "حمام مغربي ملكي", "حمام ياباني فاخر", "تنظيف عميق للبشرة", "بديكير"],
     "knowsAbout": ["العافية اليابانية", "العلاج بالحرارة", "الاسترخاء الحسي"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "خدمات أونسن",
       "itemListElement": [
-        {"@type":"Offer","priceCurrency":"SAR","price":"200","itemOffered":{"@type":"Service","name":"اللوشن التقليدي"}},
-        {"@type":"Offer","priceCurrency":"SAR","price":"250","itemOffered":{"@type":"Service","name":"زيت أونسن الفاخر"}},
-        {"@type":"Offer","priceCurrency":"SAR","price":"300","itemOffered":{"@type":"Service","name":"الحمام المغربي أو حمام إسترخائي"}}
+        {"@type":"Offer","priceCurrency":"SAR","price":"180","itemOffered":{"@type":"Service","name":"مساج شياتسو ياباني، 40 دقيقة"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"230","itemOffered":{"@type":"Service","name":"مساج شياتسو ياباني، 60 دقيقة"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"180","itemOffered":{"@type":"Service","name":"مساج تايلندي أرضي، 40 دقيقة"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"230","itemOffered":{"@type":"Service","name":"مساج تايلندي أرضي، 60 دقيقة"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"180","itemOffered":{"@type":"Service","name":"مساج استرخائي سويدي، 40 دقيقة"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"230","itemOffered":{"@type":"Service","name":"مساج استرخائي سويدي، 60 دقيقة"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"300","itemOffered":{"@type":"Service","name":"مساج 3 في 1، 70 دقيقة"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"200","itemOffered":{"@type":"Service","name":"الحمام المغربي الملكي"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"250","itemOffered":{"@type":"Service","name":"الحمام الياباني الفاخر"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"250","itemOffered":{"@type":"Service","name":"تنظيف عميق للبشرة"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"200","itemOffered":{"@type":"Service","name":"البديكير"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"50","itemOffered":{"@type":"Service","name":"ماسك كولاجين (8 في 1)"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"30","itemOffered":{"@type":"Service","name":"زيت أونسن الفاخر"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"50","itemOffered":{"@type":"Service","name":"شمعة أونسن الدافئة"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"20","itemOffered":{"@type":"Service","name":"عصا البامبو للضغط القوي"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"350","itemOffered":{"@type":"Service","name":"العرض الأول: مساج 45 دقيقة مع حمام"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"400","itemOffered":{"@type":"Service","name":"العرض الثاني: مساج 60 دقيقة مع حمام"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"350","itemOffered":{"@type":"Service","name":"العرض الثالث: مساج قدمين مع بديكير وماسك كولاجين"}},
+        {"@type":"Offer","priceCurrency":"SAR","price":"500","itemOffered":{"@type":"Service","name":"باقة الفخامة"}}
       ]
     }
   }
@@ -82,7 +100,7 @@
       {
         "@type": "Question",
         "name": "ما الخدمات التي يقدمها أونسن؟",
-        "acceptedAnswer": {"@type":"Answer","text":"يقدم أونسن جلسات اللوشن والزيوت الفاخرة والشموع الدافئة ومساج البامبو والحمام المغربي أو حمام إسترخائي."}
+        "acceptedAnswer": {"@type":"Answer","text":"يقدم أونسن جلسات شياتسو وتايلندي أرضي وسويدي ومساج 3 في 1، وحمامات مغربية ويابانية، وتنظيفاً عميقاً للبشرة وبديكيراً وإضافات وباقات."}
       },
       {
         "@type": "Question",
@@ -126,16 +144,15 @@
           <div class="cta-row">
             <p class="hero-signature">أنت تستحق أن تعامل نفسك برفاهية.</p>
             <a class="btn primary" href="booking.html">احجز زيارتك</a>
-            <a class="btn" href="services.html">استكشف الخدمات</a>
+            <a class="btn" href="menu.html">استكشف القائمة</a>
           </div>
         </div>
 
         <div class="hero-card reveal">
           <img class="hero-photo" src="assets/hero-onsen.jpeg?v=9" alt="حمام أونسن حار هادئ مع إطلالة جبلية وشعار أونسن" fetchpriority="high">
           <div class="minor-card">
-            <span>تجربة الأونسن المميزة</span>
-            <strong>60 دقيقة</strong>
-            <span>حمام ساخن خاص عند الغروب</span>
+            <span class="minor-title">طقوس أونسن الأصيلة</span>
+            <span class="minor-copy">دفء ياباني وهدوء يعيد إليك توازنك.</span>
           </div>
         </div>
       </div>
@@ -193,37 +210,34 @@
         <p>اكتشف الأجواء والتفاصيل والطقوس التي تميز تجربة أونسن.</p>
       </div>
 
-      <h3 class="gallery-subtitle">صور المتجر</h3>
+      <h3 class="gallery-subtitle">أجواء المتجر</h3>
       <div class="gallery-grid gallery-store">
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-06.jpeg" alt="مساحة الاسترخاء في أونسن" loading="lazy" decoding="async"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-08.jpeg" alt="أجواء متجر أونسن العصرية" loading="lazy" decoding="async"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-10.jpeg" alt="إضاءة دافئة في متجر أونسن" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-01.jpeg" alt="جلسة جلوس هادئة داخل أونسن" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-04.jpeg" alt="ممر داخلي بتفاصيل خشبية وسجاد في أونسن" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-06.jpeg" alt="منطقة الاستقبال والجلوس في أونسن" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-09.jpeg" alt="درج المتجر المحاط بالنباتات والسجاد" loading="lazy" decoding="async"></div>
       </div>
 
-      <h3 class="gallery-subtitle">صور المنتجات</h3>
+      <h3 class="gallery-subtitle">منتجات أونسن</h3>
       <div class="gallery-grid gallery-products">
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-01.jpeg" alt="منتجات العناية الفاخرة في أونسن" loading="lazy" decoding="async"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-02.jpeg" alt="زيوت ولوشنات جلسات أونسن" loading="lazy" decoding="async"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-03.jpeg" alt="تفاصيل منتجات العناية في أونسن" loading="lazy" decoding="async"></div>
-        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-04.jpeg" alt="تفاصيل منتجات الاسترخاء والعناية" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-03.jpeg" alt="مجموعة من منتجات العناية والاستحمام في أونسن" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-08.jpeg" alt="مجموعة زيوت ومنتجات العناية من أونسن" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="assets/gallery/onsen-gallery-10.jpeg" alt="زيوت وأملاح العناية من أونسن" loading="lazy" decoding="async"></div>
       </div>
     </section>
 
     <section id="reviews" class="section reviews-section container reveal">
       <div class="section-header">
         <h2>آراء ضيوف أونسن</h2>
-        <p>شهادات ضيوف مختارة عن لحظات الهدوء والعناية في أونسن.</p>
+        <p>اطّلع على آراء الضيوف المنشورة من مصدرها مباشرة على Google Maps.</p>
       </div>
-      <a class="google-review-link" href="https://maps.app.goo.gl/XB1RgDi8UA3HwiJ76?g_st=aw" target="_blank" rel="noopener">
-        ⭐ شاهد تقييمات أونسن على Google Maps
+      <a class="google-review-link" href="https://maps.app.goo.gl/XB1RgDi8UA3HwiJ76?g_st=aw" target="_blank" rel="noopener noreferrer">
+        ⭐ اقرأ التقييمات الحقيقية على Google Maps
       </a>
-      <div class="testimonial-grid" aria-label="شهادات ضيوف أونسن">
-        <article class="testimonial"><span class="review-stars" aria-hidden="true">★★★★★</span><blockquote>“تجربة هادئة جداً، من الاستقبال إلى نهاية الجلسة. التفاصيل الصغيرة صنعت فرقاً كبيراً.”</blockquote><cite>ضيف من أونسن</cite></article>
-        <article class="testimonial"><span class="review-stars" aria-hidden="true">★★★★★</span><blockquote>“الأجواء مريحة والروائح لطيفة، خرجت وأنا أشعر بخفة وراحة حقيقية.”</blockquote><cite>ضيف من أونسن</cite></article>
-        <article class="testimonial"><span class="review-stars" aria-hidden="true">★★★★★</span><blockquote>“مكان أنيق وخصوصية ممتازة، وسأعود بالتأكيد لطقس استرخائي آخر.”</blockquote><cite>ضيف من أونسن</cite></article>
-        <article class="testimonial"><span class="review-stars" aria-hidden="true">★★★★★</span><blockquote>“خدمة راقية واهتمام واضح بالتفاصيل، كانت الجلسة فرصة حقيقية للراحة.”</blockquote><cite>ضيف من أونسن</cite></article>
-        <article class="testimonial"><span class="review-stars" aria-hidden="true">★★★★★</span><blockquote>“النظافة والخصوصية والأجواء الهادئة جعلت التجربة مميزة من البداية للنهاية.”</blockquote><cite>ضيف من أونسن</cite></article>
-        <article class="testimonial"><span class="review-stars" aria-hidden="true">★★★★★</span><blockquote>“تجربة دافئة ومريحة، والطاقم متعاون ويمنحك إحساساً بالاهتمام.”</blockquote><cite>ضيف من أونسن</cite></article>
+      <div class="reviews-source-card">
+        <p class="reviews-note" id="google-reviews-status" aria-live="polite" data-ar="لإظهار المراجعات هنا، يلزم تهيئة مفتاح Google Maps API مقيّد ومعرّف المكان. يمكنك قراءة المراجعات الأصلية مباشرة على Google Maps." data-en="Showing reviews here requires a restricted Google Maps API key and the business Place ID. You can read the original reviews directly on Google Maps.">لإظهار المراجعات هنا، يلزم تهيئة مفتاح Google Maps API مقيّد ومعرّف المكان. يمكنك قراءة المراجعات الأصلية مباشرة على Google Maps.</p>
+        <div class="testimonial-grid" id="google-review-list" aria-label="مراجعات Google الحقيقية"></div>
+        <p class="google-attribution" id="google-reviews-attribution" data-ar="المراجعات والتقييمات من Google Maps." data-en="Reviews and ratings from Google Maps." hidden>المراجعات والتقييمات من Google Maps.</p>
       </div>
     </section>
 
@@ -238,11 +252,17 @@
     </div>
 
     <div class="ambient-player" role="group" aria-label="التحكم في الأجواء الصوتية">
-      <span id="ambient-status" aria-live="polite">صوت المطر جاهز</span>
-      <button class="btn" id="ambient-toggle" type="button" aria-pressed="false">تشغيل صوت المطر</button>
+      <span id="ambient-status" aria-live="polite">صوت المطر والرياح والأجراس اليابانية جاهز</span>
+      <button class="btn" id="ambient-toggle" type="button" aria-pressed="false">تشغيل المطر والرياح والأجراس</button>
     </div>
     <audio id="ambient-audio" autoplay loop muted playsinline preload="auto" aria-hidden="true">
       <source src="assets/onsen-rainfall.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bells-audio" autoplay loop muted playsinline preload="auto" aria-hidden="true">
+      <source src="assets/japanese-wooden-bells.wav?v=2" type="audio/wav">
+    </audio>
+    <audio id="wind-audio" autoplay loop muted playsinline preload="auto" aria-hidden="true">
+      <source src="assets/onsen-wind.wav" type="audio/wav">
     </audio>
 
     <section id="contact" class="section container reveal">
@@ -265,7 +285,7 @@
         <article class="info-card">
           <h3>الموقع</h3>
           <p>منتجع عافية فاخر في الرياض يستقبل الأفراد والمجموعات الصغيرة.</p>
-          <a class="btn primary mt-1" href="https://maps.app.goo.gl/XB1RgDi8UA3HwiJ76?g_st=aw" target="_blank" rel="noopener">افتح الموقع على Google Maps</a>
+          <a class="btn primary mt-1" href="https://maps.app.goo.gl/XB1RgDi8UA3HwiJ76?g_st=aw" target="_blank" rel="noopener noreferrer">افتح الموقع على Google Maps</a>
         </article>
       </div>
     </section>
@@ -278,7 +298,7 @@
       <div class="seo-grid">
         <article class="info-card">
           <h3>خدماتنا</h3>
-          <p>مساج، لوشن، زيوت فاخرة، مساج بامبو، وحمام مغربي أو حمام إسترخائي.</p>
+          <p>مساج شياتسو وتايلندي وسويدي، حمامات مغربية ويابانية، تنظيف البشرة، بديكير، إضافات وعروض.</p>
           <a class="text-link" href="services.html">تصفح قائمة الخدمات ←</a>
         </article>
         <article class="info-card">
@@ -319,9 +339,9 @@
         <h2 id="faq-title">إجابات تهم راحتك</h2>
       </div>
       <div class="faq-list">
-        <details><summary>ما الخدمات التي يقدمها أونسن؟</summary><p>نقدم جلسات اللوشن والزيوت الفاخرة والشموع الدافئة ومساج البامبو والحمام المغربي أو حمام إسترخائي.</p></details>
+        <details><summary>ما الخدمات التي يقدمها أونسن؟</summary><p>نقدم جلسات مساج شياتسو وتايلندي وسويدي، وحمامات مغربية ويابانية، وخدمات للعناية بالبشرة والقدمين وباقات متكاملة.</p></details>
         <details><summary>كيف يمكنني حجز جلسة؟</summary><p>يمكنك الحجز عبر واتساب أو البريد الإلكتروني من صفحة الحجز، وسيساعدك فريق أونسن في اختيار الموعد والخدمة.</p></details>
-        <details><summary>ماهي المواد أو المنتجات المستخدمة للمساج والحمام؟</summary><p>نختار منتجاتنا بعناية من مكونات طبيعية، وهي خالية تماماً من المواد الحافظة وفق معلومات المنتجات المعتمدة لدينا.</p></details>
+        <details><summary>هل يمكن تنسيق الإضافات مع الجلسات؟</summary><p>نعم، يمكن تنسيق إضافات العناية مع الجلسة حسب الخدمات المتاحة وتفضيلاتك.</p></details>
       </div>
     </section>
   </main>
@@ -338,6 +358,6 @@
     <p>&copy; <span id="year"></span> أونسن • جميع الحقوق محفوظة.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>

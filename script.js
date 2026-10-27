@@ -43,69 +43,45 @@ document.addEventListener('DOMContentLoaded', () => {
       'h1': ['You deserve to be treated with luxury.', 'أنت تستحق أن تُعامل برفاهية.'],
       '.hero-signature': ['You deserve a moment for yourself.', 'أنت تستحق أن تعامل نفسك برفاهية.'],
       '.tagline': ['Experience bamboo serenity, restorative hot springs, and professionally guided rituals designed for true rest in Riyadh.', 'استمتع بسكينة البامبو والينابيع الدافئة وطقوس العافية المصممة للراحة الحقيقية في الرياض.'],
-      '.minor-card span': [['The signature Onsen experience', 'تجربة الأونسن المميزة'], ['A private hot bath at sunset', 'حمام ساخن خاص عند الغروب']],
-      '.minor-card strong': ['60 minutes', '60 دقيقة'],
+      '.minor-card .minor-title': ['Authentic Onsen rituals', 'طقوس أونسن الأصيلة'],
+      '.minor-card .minor-copy': ['Japanese warmth and calm to restore your balance.', 'دفء ياباني وهدوء يعيد إليك توازنك.'],
       '.cta-row .btn': [['Book your visit', 'احجز زيارتك'], ['Explore services', 'استكشف الخدمات']],
       'main > section.section:nth-of-type(1) .section-header h2': [['A quiet space to restore your balance', 'مساحة هادئة لاستعادة توازنك']],
-      '.section-header p': [['Every detail at Onsen is shaped to feel calm, elevated, and restorative — from the warm mineral baths to the soft, ambient atmosphere.', 'كل تفصيل في أونسن صُمم ليمنحك الهدوء والرقي والاسترخاء، من الحمامات المعدنية الدافئة إلى الأجواء الناعمة.']],
+      'main > section.section:nth-of-type(1) .section-header p': [['Every detail at Onsen is shaped to feel calm, elevated, and restorative — from the warm mineral baths to the soft, ambient atmosphere.', 'كل تفصيل في أونسن صُمم ليمنحك الهدوء والرقي والاسترخاء، من الحمامات المعدنية الدافئة إلى الأجواء الناعمة.']],
       '.feature-card h3': [['Mineral rituals', 'طقوس المعادن'], ['Botanical calm', 'سكينة الطبيعة'], ['Luxury ambience', 'أجواء فاخرة']],
       '.feature-card p': [['Traditional hot spring experiences with a refined, modern wellness perspective.', 'تجارب ينابيع ساخنة تقليدية برؤية عصرية راقية.'], ['Natural aromatics, grounded body therapies, and carefully chosen restorative ingredients.', 'روائح طبيعية وعلاجات جسدية ومكونات مختارة بعناية.'], ['Soft lighting, cedar tones, and immersive design to support deep relaxation and renewal.', 'إضاءة ناعمة ونغمات خشبية وتصميم يساعد على الاسترخاء والتجدد.']],
       '.callout h3': [['Created for deep rest.', 'صُمم للراحة العميقة.']],
       '.callout p': [['Our spa is placed around the idea of intentional pause: fewer distractions, more balance, and a stronger sense of wellbeing for busy professionals and wellness seekers alike.', 'صُمم منتجعنا حول فكرة التوقف الواعي: مشتتات أقل وتوازن أكبر وإحساس أعمق بالعافية.']],
       '#gallery .section-header h2': [['Details that keep calm close', 'تفاصيل تُبقي الهدوء قريباً']],
       '#gallery .section-header p': [['Explore the atmosphere, textures, and rituals that define the Onsen experience.', 'اكتشف الأجواء والتفاصيل والطقوس التي تميز تجربة أونسن.']],
-      '#gallery .gallery-subtitle': [['Store gallery', 'صور المتجر'], ['Product gallery', 'صور المنتجات']],
+      '#gallery .gallery-subtitle': [['Store atmosphere', 'أجواء المتجر'], ['Onsen products', 'منتجات أونسن']],
       '#reviews .section-header h2': [['Words from our guests', 'كلمات تضيء تجربة ضيوفنا']],
-      '#reviews .section-header p': [['Selected reflections on calm, privacy, and thoughtful care.', 'انطباعات مختارة عن الهدوء والخصوصية والعناية المتقنة.']],
-      '.google-review-link': ['See Onsen on Google Maps', 'شاهد تقييمات أونسن على Google Maps'],
-      '.testimonial blockquote': [
-        ['“A wonderfully calm experience, from arrival to the end of the session. The little details made all the difference.”', '“تجربة هادئة جداً، من الاستقبال إلى نهاية الجلسة. التفاصيل الصغيرة صنعت فرقاً كبيراً.”'],
-        ['“The atmosphere is soothing and the scents are gentle. I left feeling genuinely rested.”', '“الأجواء مريحة والروائح لطيفة، خرجت وأنا أشعر بخفة وراحة حقيقية.”'],
-        ['“An elegant, private place. I will definitely come back for another relaxing ritual.”', '“مكان أنيق وخصوصية ممتازة، وسأعود بالتأكيد لطقس استرخائي آخر.”'],
-        ['“Thoughtful service and clear attention to detail. The session was a real chance to unwind.”', '“خدمة راقية واهتمام واضح بالتفاصيل، كانت الجلسة فرصة حقيقية للراحة.”'],
-        ['“The cleanliness, privacy, and peaceful atmosphere made the whole visit special.”', '“النظافة والخصوصية والأجواء الهادئة جعلت التجربة مميزة من البداية للنهاية.”'],
-        ['“A warm, relaxing experience with a team that makes you feel cared for.”', '“تجربة دافئة ومريحة، والطاقم متعاون ويمنحك إحساساً بالاهتمام.”'],
-      ],
-      '.testimonial cite': ['Onsen guest', 'ضيف من أونسن'],
-      '.ambient-player span': ['Rain sounds ready', 'صوت المطر جاهز'],
-      '#ambient-toggle': ['Play rain', 'تشغيل صوت المطر'],
+      '#reviews .section-header p': [['Read guest reviews directly on Google Maps.', 'اطّلع على آراء الضيوف المنشورة من مصدرها مباشرة على Google Maps.']],
+      '.google-review-link': ['Read authentic reviews on Google Maps', 'اقرأ التقييمات الحقيقية على Google Maps'],
+      '.reviews-note': ['Guest reviews are shown on Onsen’s official Google Maps listing.', 'تظهر المراجعات الأصلية من الضيوف على صفحة أونسن في Google Maps.'],
+      '#ambient-status': ['Rain, wind and Japanese bells are ready', 'صوت المطر والرياح والأجراس اليابانية جاهز'],
+      '#ambient-toggle': ['Play rain, wind and Japanese bells', 'تشغيل المطر والرياح والأجراس'],
       '#contact .section-header h2': [['Plan your visit', 'خطط لزيارتك']],
       '#contact .section-header p': [['Reserve a retreat, ask about private experiences, or enquire about group sessions.', 'احجز تجربتك أو اسأل عن الجلسات الخاصة أو المواعيد الجماعية.']],
     },
     services: {
-      '.section-header h1': ['Signature wellness experiences', 'قائمة خدمات أونسن'],
-      '.section-header h2': ['What is included', 'ما الذي تتضمنه الجلسة'],
-      '.section-header p': [['Each ritual is created to nurture the body, calm the mind, and restore your sense of ease.', 'كل طقس صُمم للعناية بالجسد وتهدئة العقل واستعادة راحتك.']],
+      '.section-header h1': ['Onsen treatments and prices', 'قائمة أونسن الجديدة'],
+      '.section-header h2': ['A complete care experience', 'تجربة عناية متكاملة'],
+      '.section-header p': [['Explore our massage sessions, care rituals, and wellness packages.', 'اكتشف جلسات المساج وطقوس العناية وباقات العافية.']],
       '.callout h3': [['Ready to reserve your ritual?', 'هل أنت مستعد لحجز طقسك؟']],
       '.callout p': [['We’d love to help you choose the right treatment for your schedule and wellness goals.', 'يسعدنا مساعدتك في اختيار العلاج المناسب لجدولك وأهدافك.']],
     },
     menu: {
       '.section-header .eyebrow': ['Onsen Spa', 'أونسن سبا'],
-      '.section-header h1': ['Onsen treatments and prices', 'قائمة الجلسات والأسعار'],
-      '.section-header p': ['Choose a treatment and get in touch to arrange your visit.', 'اختر ما يناسبك وتواصل معنا لتنسيق موعدك.'],
-      '.service-card h3': [
-        ['Traditional lotion', 'اللوشن التقليدي'],
-        ['Onsen luxury oil', 'زيت أونسن الفاخر'],
-        ['Onsen warm candle', 'شمعة أونسن الدافئة'],
-        ['Natural bamboo massage add-on', 'إضافة مساج البامبو الطبيعي'],
-        ['Moroccan bath or relaxing bath', 'الحمام المغربي أو حمام إسترخائي'],
-        ['Sunset Onsen hot bath', 'حمام أونسن ساخن عند الغروب'],
-      ],
-      '.service-card p:not(.price)': [
-        ['Light, fast-absorbing hydration.', 'ترطيب خفيف وسريع الامتصاص.'],
-        ['A smooth, deeply relaxing experience.', 'انسيابية فائقة واسترخاء أعمق.'],
-        ['A warm, comforting sensory experience.', 'تجربة حسية دافئة ومترفة تذيب التوتر.'],
-        ['An optional addition for a deeper massage.', 'قوة إضافية وعمق أكبر في تخفيف الشد العضلي.'],
-        ['Steam, cleansing, exfoliation, and hydration.', 'بخار وتنظيف وتقشير وإزالة الجلد الميت وترطيب واسترخاء.'],
-        ['A quiet private ritual with warm water and a sunset atmosphere.', 'طقس هادئ خاص مع ماء دافئ وأجواء غروب مريحة.'],
-      ],
+      '.section-header h1': ['Onsen treatments and prices', 'قائمة أونسن الجديدة'],
+      '.section-header p': ['Explore our massage sessions, care rituals, and wellness packages.', 'اكتشف جلسات المساج وطقوس العناية وباقات العافية.'],
       '.callout h2': ['You deserve a moment of luxury.', 'أنت تستحق أن تعامل نفسك برفاهية.'],
       '.callout p': ['Book a session and let our team help you choose the right experience.', 'احجز جلستك ودع فريق أونسن يرشح لك التجربة الأقرب لاحتياجك.'],
       '.callout .btn': ['Start booking', 'ابدأ الحجز'],
     },
     booking: {
       'main > .section .section-header h1': ['Reserve your experience', 'احجز تجربتك'],
-      '.section-header p': [['Choose the channel that feels easiest for you. Our concierge will help you plan the perfect wellness moment.', 'اختر الطريقة الأسهل لك وسيساعدك فريقنا في التخطيط للحظة العافية المثالية.']],
+      '.section-header > p:not(.booking-menu-link)': ['Choose the channel that feels easiest for you. Our concierge will help you plan the perfect wellness moment.', 'اختر الطريقة الأسهل لك وسيساعدك فريقنا في التخطيط للحظة العافية المثالية.'],
       '.booking-card h3': [['WhatsApp concierge', 'خدمة واتساب'], ['Email inquiry', 'استفسار عبر البريد'], ['Call or message', 'اتصل أو راسلنا']],
       '.booking-card p': [['Share your preferred treatment, date, and any special requests for a quick reply.', 'شارك العلاج والتاريخ المفضل وأي طلبات خاصة لتحصل على رد سريع.'], ['Perfect for custom plans, gifting, or longer requests with details about your preferred visit.', 'مناسب للخطط الخاصة والهدايا والطلبات المفصلة.'], ['For faster confirmations, reach our team directly via WhatsApp or phone.', 'للتأكيد السريع تواصل مع فريقنا عبر واتساب أو الهاتف.']],
       'main > .section:nth-child(2) .section-header h2': [['What to expect', 'ماذا تتوقع']],
@@ -113,13 +89,23 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const page = document.body.dataset.page;
+  let syncAmbientControl = () => {};
+  let syncGoogleReviews = () => {};
   const setTranslated = (language) => {
     const common = translations.common;
-    document.querySelectorAll('.site-nav a').forEach((link, index) => {
-      if (common.nav[index]) link.textContent = common.nav[index][language === 'ar' ? 1 : 0];
-    });
-    document.querySelectorAll('.footer-nav a').forEach((link, index) => {
-      if (common.nav[index]) link.textContent = common.nav[index][language === 'ar' ? 1 : 0];
+    const navByHref = new Map([
+      ['index.html', common.nav[0]],
+      ['menu.html', common.nav[1]],
+      ['services.html', common.nav[2]],
+      ['#gallery', common.nav[3]],
+      ['index.html#gallery', common.nav[3]],
+      ['booking.html', common.nav[4]],
+      ['#contact', common.nav[5]],
+      ['index.html#contact', common.nav[5]],
+    ]);
+    document.querySelectorAll('.site-nav a, .footer-nav a').forEach((link) => {
+      const label = navByHref.get(link.getAttribute('href'));
+      if (label) link.textContent = label[language === 'ar' ? 1 : 0];
     });
     const pageTranslations = translations[page] || {};
     Object.entries(pageTranslations).forEach(([selector, values]) => {
@@ -135,11 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-language]').forEach((button) => {
       button.classList.toggle('active', button.dataset.language === language);
     });
-    const ambientToggle = document.getElementById('ambient-toggle');
-    const ambientAudio = document.getElementById('ambient-audio');
-    if (ambientToggle && ambientAudio && !ambientAudio.muted) {
-      ambientToggle.textContent = language === 'ar' ? 'كتم الصوت' : 'Mute sound';
-    }
+    document.querySelectorAll('[data-ar][data-en]').forEach((node) => {
+      node.textContent = node.dataset[language];
+    });
+    syncAmbientControl();
+    syncGoogleReviews(language);
   };
 
   document.querySelectorAll('[data-language]').forEach((button) => {
@@ -149,66 +135,197 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const mapsApiKey = document.querySelector('meta[name="google-maps-api-key"]')?.content.trim();
+  const placeId = document.querySelector('meta[name="google-place-id"]')?.content.trim();
+  const reviewsList = document.getElementById('google-review-list');
+  const reviewsStatus = document.getElementById('google-reviews-status');
+  const reviewsAttribution = document.getElementById('google-reviews-attribution');
+  const googleMapsUrl = 'https://maps.app.goo.gl/XB1RgDi8UA3HwiJ76?g_st=aw';
+  let googlePlaceData = null;
+  let googleReviewData = [];
+
+  syncGoogleReviews = (language) => {
+    if (!googlePlaceData || !reviewsList || !reviewsStatus) return;
+    reviewsList.replaceChildren();
+    googleReviewData.forEach((review) => {
+      const card = document.createElement('article');
+      card.className = 'testimonial';
+      const stars = document.createElement('span');
+      const roundedRating = Math.max(0, Math.min(5, Math.round(review.rating || 0)));
+      stars.className = 'review-stars';
+      stars.setAttribute('aria-label', `${review.rating || 0} / 5`);
+      stars.textContent = `${'★'.repeat(roundedRating)}${'☆'.repeat(5 - roundedRating)}`;
+      const quote = document.createElement('blockquote');
+      quote.textContent = review.text;
+      const author = document.createElement('cite');
+      const authorLink = document.createElement('a');
+      authorLink.href = review.authorAttribution?.uri || googleMapsUrl;
+      authorLink.target = '_blank';
+      authorLink.rel = 'noopener noreferrer';
+      authorLink.textContent = review.authorAttribution?.displayName || 'Google Maps';
+      author.append(authorLink);
+      const source = document.createElement('a');
+      source.href = review.googleMapsURI || googleMapsUrl;
+      source.target = '_blank';
+      source.rel = 'noopener noreferrer';
+      source.textContent = language === 'en' ? 'View on Google Maps' : 'عرض المراجعة على Google Maps';
+      card.append(stars, quote, author, source);
+      reviewsList.append(card);
+    });
+
+    if (reviewsAttribution) reviewsAttribution.hidden = false;
+    const rating = googlePlaceData.rating ? ` · ${googlePlaceData.rating} / 5` : '';
+    const count = googlePlaceData.userRatingCount
+      ? language === 'en' ? ` · ${googlePlaceData.userRatingCount} reviews` : ` · ${googlePlaceData.userRatingCount} تقييم`
+      : '';
+    reviewsStatus.textContent = `${googlePlaceData.displayName || 'Onsen'}${rating}${count}`;
+    if (!googleReviewData.length) {
+      reviewsStatus.textContent += language === 'en'
+        ? ' · No written reviews are available right now.'
+        : ' · لا توجد مراجعات نصية متاحة حالياً.';
+    }
+  };
+
+  const showGoogleReviews = async () => {
+    if (!mapsApiKey || !placeId || !reviewsList || !reviewsStatus) return;
+
+    try {
+      const mapsScript = document.createElement('script');
+      const language = document.documentElement.lang === 'en' ? 'en' : 'ar';
+      mapsScript.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(mapsApiKey)}&libraries=places&v=weekly&language=${language}`;
+      mapsScript.async = true;
+      mapsScript.referrerPolicy = 'strict-origin-when-cross-origin';
+      const scriptLoaded = new Promise((resolve, reject) => {
+        mapsScript.onload = resolve;
+        mapsScript.onerror = () => reject(new Error('Google Maps JavaScript API failed to load'));
+      });
+      document.head.append(mapsScript);
+      await scriptLoaded;
+
+      const { Place } = await window.google.maps.importLibrary('places');
+      const place = new Place({ id: placeId });
+      await place.fetchFields({ fields: ['displayName', 'rating', 'userRatingCount', 'reviews'] });
+
+      googlePlaceData = place;
+      googleReviewData = (place.reviews || []).filter((review) => review.text).slice(0, 5);
+      syncGoogleReviews(document.documentElement.lang === 'en' ? 'en' : 'ar');
+    } catch (error) {
+      console.error('Unable to load Google Maps reviews:', error);
+      reviewsStatus.textContent = document.documentElement.lang === 'en'
+        ? 'Reviews could not load. You can read them directly on Google Maps.'
+        : 'تعذر تحميل التقييمات الآن. يمكنك الاطلاع عليها مباشرة على Google Maps.';
+    }
+  };
+  showGoogleReviews();
+
   const audio = document.getElementById('ambient-audio');
+  const bellsAudio = document.getElementById('bells-audio');
+  const windAudio = document.getElementById('wind-audio');
   const ambientToggle = document.getElementById('ambient-toggle');
   const ambientStatus = document.getElementById('ambient-status');
   if (audio) {
-    audio.muted = true;
-    audio.loop = true;
-    audio.preload = 'auto';
-    audio.setAttribute('playsinline', '');
-    audio.load();
+    const tracks = [audio, bellsAudio, windAudio].filter(Boolean);
+    const messages = {
+      ar: {
+        play: 'تشغيل المطر والرياح والأجراس',
+        pause: 'إيقاف الأجواء الصوتية',
+        playing: 'المطر والرياح والأجراس اليابانية تعمل',
+        ready: 'الصوت جاهز؛ اضغط للاستماع',
+        paused: 'الأجواء الصوتية متوقفة',
+        error: 'تعذر تحميل الصوت. حاول مرة أخرى لاحقاً.',
+      },
+      en: {
+        play: 'Play rain, wind and Japanese bells',
+        pause: 'Pause ambient sound',
+        playing: 'Rain, wind and Japanese bells are playing',
+        ready: 'Sound is ready; tap to listen',
+        paused: 'Ambient sound is paused',
+        error: 'Audio could not load. Please try again later.',
+      },
+    };
+    let statusKey = 'ready';
 
-    const syncAmbientControl = (message) => {
-      const englishMessages = {
-        'صوت المطر جاهز': 'Rain is ready',
-        'اضغط لتشغيل صوت المطر': 'Tap to hear the rain',
-        'صوت المطر مكتوم': 'Rain is muted',
-        'صوت المطر يعمل': 'Rain is playing',
-        'تعذر التشغيل، حاول مرة أخرى': 'Unable to play rain. Try again.',
-      };
-      const isEnglish = document.documentElement.lang === 'en';
+    syncAmbientControl = (nextStatus) => {
+      if (nextStatus) statusKey = nextStatus;
+      const language = document.documentElement.lang === 'en' ? 'en' : 'ar';
+      const isPlaying = tracks.some((track) => !track.paused);
+      const isAudible = tracks.some((track) => !track.paused && !track.muted);
       if (ambientToggle) {
-        ambientToggle.textContent = isEnglish
-          ? (audio.muted ? 'Play rain' : 'Mute rain')
-          : (audio.muted ? 'تشغيل صوت المطر' : 'كتم صوت المطر');
-        ambientToggle.setAttribute('aria-pressed', String(!audio.muted));
+        ambientToggle.textContent = isAudible ? messages[language].pause : messages[language].play;
+        ambientToggle.setAttribute('aria-pressed', String(isAudible));
       }
-      if (ambientStatus && message) ambientStatus.textContent = isEnglish ? (englishMessages[message] || message) : message;
+      if (ambientStatus) ambientStatus.textContent = isAudible
+        ? messages[language].playing
+        : isPlaying ? messages[language].ready : messages[language][statusKey];
     };
 
-    audio.addEventListener('error', () => {
-      syncAmbientControl('تعذر التشغيل، حاول مرة أخرى');
-    });
-    audio.addEventListener('play', () => {
-      syncAmbientControl(audio.muted ? 'صوت المطر جاهز' : 'صوت المطر يعمل');
-    });
-    audio.addEventListener('pause', () => {
-      syncAmbientControl('صوت المطر مكتوم');
-    });
+    const usableTracks = () => tracks.filter((track) => track.dataset.failed !== 'true');
+    const startAmbient = async () => {
+      const availableTracks = usableTracks();
+      if (!availableTracks.length) {
+        syncAmbientControl('error');
+        return false;
+      }
 
-    audio.play()
-      .then(() => syncAmbientControl('صوت المطر جاهز'))
-      .catch(() => syncAmbientControl('اضغط لتشغيل صوت المطر'));
+      availableTracks.forEach((track) => {
+        track.muted = false;
+        track.volume = track === audio ? 0.48 : track === bellsAudio ? 0.62 : 0.48;
+      });
+      const audibleResults = await Promise.allSettled(availableTracks.map((track) => track.play()));
+      if (availableTracks.some((track) => !track.paused && !track.muted)) {
+        syncAmbientControl('playing');
+        return true;
+      }
+
+      availableTracks.forEach((track) => { track.muted = true; });
+      const mutedResults = await Promise.allSettled(availableTracks.map((track) => track.play()));
+      if (availableTracks.some((track) => !track.paused)) {
+        syncAmbientControl('ready');
+        return false;
+      }
+
+      const failedToLoad = availableTracks.every((track) => track.dataset.failed === 'true');
+      syncAmbientControl(failedToLoad || mutedResults.every((result) => result.status === 'rejected') && audibleResults.every((result) => result.status === 'rejected')
+        ? 'error'
+        : 'paused');
+      return false;
+    };
+
+    tracks.forEach((track) => {
+      track.loop = true;
+      track.preload = 'auto';
+      track.setAttribute('playsinline', '');
+      track.muted = true;
+      track.load();
+      track.addEventListener('error', () => {
+        track.dataset.failed = 'true';
+        syncAmbientControl(usableTracks().length ? 'ready' : 'error');
+      });
+      track.addEventListener('play', () => syncAmbientControl());
+      track.addEventListener('pause', () => syncAmbientControl());
+    });
 
     ambientToggle?.addEventListener('click', async () => {
-      if (!audio.muted) {
-        audio.pause();
-        audio.muted = true;
-        syncAmbientControl('صوت المطر مكتوم');
+      const isAudible = tracks.some((track) => !track.paused && !track.muted);
+      if (isAudible) {
+        tracks.forEach((track) => {
+          track.pause();
+          track.muted = true;
+        });
+        syncAmbientControl('paused');
         return;
       }
-
-      audio.muted = false;
-      audio.volume = 0.55;
-      try {
-        await audio.play();
-        syncAmbientControl('صوت المطر يعمل');
-      } catch {
-        audio.muted = true;
-        syncAmbientControl('تعذر التشغيل، حاول مرة أخرى');
-      }
+      await startAmbient();
     });
+
+    const enableAfterGesture = (event) => {
+      if (ambientToggle?.contains(event.target)) return;
+      if (tracks.every((track) => track.muted || track.paused)) startAmbient();
+      window.removeEventListener('keydown', enableAfterGesture);
+    };
+    window.addEventListener('pointerdown', enableAfterGesture, { once: true, passive: true });
+    window.addEventListener('keydown', enableAfterGesture, { once: true });
+    startAmbient();
   }
 
   const revealItems = document.querySelectorAll('.reveal');
