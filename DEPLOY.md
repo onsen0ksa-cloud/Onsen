@@ -20,7 +20,7 @@ The homepage loads current reviews with the Google Maps JavaScript API Places li
 4. In the repository, open Settings -> Secrets and variables -> Actions -> Variables and add `GOOGLE_MAPS_API_KEY` and `GOOGLE_PLACE_ID`.
 5. Run the Deploy to GitHub Pages workflow, or push a change to a deployment branch.
 
-The browser key is included in the published HTML by design, so it must be restricted in Google Cloud; do not commit an unrestricted key to the repository. Without both variables, the page displays a setup status instead of silently leaving an empty reviews area. Before enabling Places content, publish Terms of Use and a Privacy Policy that meet Google's Places API policy requirements.
+The browser key is included in the published HTML by design, so it must be restricted in Google Cloud; do not commit an unrestricted key to the repository. Without both variables, visitors can still open the live Google reviews from the reviews card. Before enabling Places content, publish Terms of Use and a Privacy Policy that meet Google's Places API policy requirements.
 
 Prepare assets before deploying
 

@@ -147,15 +147,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const googleReviewsMessages = {
     ar: {
       loading: 'جارٍ تحميل المراجعات من Google Maps…',
-      missingKey: 'لم تُفعّل المراجعات بعد. أضف متغير GOOGLE_MAPS_API_KEY إلى إعدادات Actions في المستودع.',
-      missingPlaceId: 'تعذر تحديد صفحة أونسن على Google Maps. أضف معرّف المكان GOOGLE_PLACE_ID إلى إعدادات Actions.',
-      failed: 'تعذر تحميل المراجعات. تحقق من مفتاح Google Maps والفوترة وقيود واجهة API، أو اقرأها مباشرة على Google Maps.',
+      missingKey: 'تعذّر تحميل المراجعات داخل الموقع حالياً. يمكنك الاطلاع على التقييمات مباشرة عبر Google Maps.',
+      missingPlaceId: 'تعذّر تحميل المراجعات داخل الموقع حالياً. يمكنك الاطلاع على التقييمات مباشرة عبر Google Maps.',
+      failed: 'تعذّر تحميل المراجعات الآن. يمكنك الاطلاع على التقييمات مباشرة عبر Google Maps.',
     },
     en: {
       loading: 'Loading reviews from Google Maps…',
-      missingKey: 'Reviews are not enabled yet. Add the GOOGLE_MAPS_API_KEY Actions variable in the repository settings.',
-      missingPlaceId: 'The Onsen Google Maps listing could not be identified. Add its GOOGLE_PLACE_ID Actions variable.',
-      failed: 'Reviews could not load. Check the Google Maps key, billing, and API restrictions, or read them directly on Google Maps.',
+      missingKey: 'Reviews cannot be displayed here right now. Read the latest guest reviews directly on Google Maps.',
+      missingPlaceId: 'Reviews cannot be displayed here right now. Read the latest guest reviews directly on Google Maps.',
+      failed: 'Reviews could not load right now. Read the latest guest reviews directly on Google Maps.',
     },
   };
 
@@ -247,7 +247,6 @@ document.addEventListener('DOMContentLoaded', () => {
       syncGoogleReviews(document.documentElement.lang === 'en' ? 'en' : 'ar');
     }
   };
-  showGoogleReviews();
 
   const audio = document.getElementById('ambient-audio');
   const bellsAudio = document.getElementById('bells-audio');
@@ -434,4 +433,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   setTranslated(localStorage.getItem('onsen-language') || 'ar');
+  showGoogleReviews();
 });
